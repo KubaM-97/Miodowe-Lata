@@ -1,0 +1,206 @@
+body
+{
+    /* Background pattern from Toptal Subtle Patterns */
+	background-image:url("img/diagonal-squares/diagonal-squares.png");    
+    background-attachment: fixed;
+	margin: 0;
+    font-size: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.container
+{
+    background-color: #c06410;
+    width: 90vw;
+    border: 5px solid #c06410;
+    font-size: 30px;
+}
+
+header img
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+footer
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+ul>li
+{
+    display: inline-block;
+    background-color: grey;
+    color: #fffeee;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+section
+{
+    border: 30px double white;
+    background-color: chocolate;
+    color: white;
+    font-family: cursive;        /*fontello*/
+    padding: 20px;
+}
+
+.scroll
+{
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    max-width: 140px;
+    display: none;
+}
+
+.row img
+{
+    width:100%;
+    margin: 5px;
+}
+.question
+{
+    width: 80%;
+    margin: 50px auto 30px auto;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+
+.odp
+{
+    width: 100%;
+    margin: 0 auto 30px auto;
+    border: 2px solid black;
+    padding: 20px;
+    transition: all 0.5s linear;
+    text-align: left;
+}
+
+label {width: 100%}
+.answer:hover
+{
+    background-color: yellow;
+    color: chocolate;
+    cursor: pointer;
+}
+
+.answer:checked
+{
+    background-color: aqua;
+}
+
+.redBackground{
+    border: 2px solid yellow
+}
+
+input[type=radio]
+{opacity: 1;}
+
+.wrong
+{
+    background-color: red;
+}
+
+.green
+{
+    background-color: green;
+}
+
+#wybor+.odp
+{
+     background-color: pink;
+}
+
+.odp#one
+{
+    font-size: 73px;
+}
+
+.lista
+{
+    background-color: firebrick;
+    font-size: 23px;
+    color: white;
+    margin-bottom: 100px;
+}
+li
+{
+    list-style-type: none;  
+}
+
+ol
+{margin-top: 10px;}
+
+li>ol>li
+{
+    margin-left: -40px;
+    margin-top: 3px;
+    font-size: 21px;
+    background-color: #f44245;
+    
+}
+
+li>ol>li:hover
+{
+    background-color: #f55354;
+    color: blue;
+    cursor: pointer;
+    
+}
+li>a
+{
+    color: whitesmoke;
+    text-decoration: none;
+}
+li>a:hover
+{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+.content
+{
+    width: 100%;
+    background-color: azure;
+    min-height: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid;
+    margin-bottom: 20px;
+}
+
+.nowe
+
+{
+    font-size: 50px;
+    text-align: center;
+    text-decoration-color: aqua;
+    color: black;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+p
+{text-align: justify;
+padding: 10px;
+font-size: 20px;
+float: left;
+color: black;}
+
+img
+{
+padding-right: 10px;
+padding-left: 10px}
+
+
+figcaption
+{color:black}

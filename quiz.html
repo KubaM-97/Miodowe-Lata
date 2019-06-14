@@ -1,0 +1,155 @@
+<!Doctype html>
+<html lang = "pl">
+<head>
+    <meta charset="utf-8">
+    <title>Miodowe Lata</title>
+    <meta name="description" content="Dowiedz się więcej o kultowym serialu">
+    <meta name="keywords" content="Miodowe Lata, Karol Krawczyk, Tadeusz Norek, Alina Krawczyk, Danuta Norek">
+    <meta name="viewport" content="width=device-width" initial=>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <script>
+        function a(){
+        var sprawdz = document.getElementsByClassName("odp");
+        
+        if (sprawdz === "checked")
+           sprawdz.style.color="red";}
+    </script>
+    
+</head>
+<body>
+    
+    <main>
+        
+        <div class="container">
+            <!-- belka navbar -->
+        
+    
+        <article>
+            <header>Sprawdź swoją wiedzę!</header>
+            
+            <form method="POST" action="#" enctype="multipart/form-data">
+                <section>
+
+                    <div class = "question">
+                        1. Pod jakim adresem znajduje się mieszkanie Krawczyków?
+                    </div>
+
+
+                   
+                    <label>
+                        <div class="odp bad popr" id="pyta1odp1">
+                            <input type="radio" name="answer1" id="wyboar" value="a" onclick = "kolor(1)">
+                            <strong>a.</strong> ul. Wolska 32/33
+                        </div>
+                    </label>
+                    
+                    
+                    <label>
+                        <div class="odp bad" id="pyt1odp2">
+                            <input type="radio" name="answer1" id="wybor" value="b" onclick = "kolor(1)">
+                           
+                            <strong>b.</strong> ul. Wolska 31/33
+                         </div>
+                    </label>
+                    
+                    <label> 
+                        <div class="odp bad" id="pyt1odp3">
+                            <input type="radio" name="answer1" value="c" id="poprawiny" onclick = "kolor(1)">
+                            <strong>c.</strong> ul. Wolska 33/32
+                        </div>
+                    </label>
+                    
+                    <label> 
+                        <div class="odp bad" id="pyt1odp4">
+                            <input type="radio" name="answer1" value="d" onclick = "kolor(1)">
+                            <strong>d.</strong> ul. Wolska 33/23
+                        </div>
+                    </label>
+                       
+                    
+
+                </section>
+                
+                
+                    <!-- Pytanie 2 -->
+                <section>
+                
+                    <div class = "question">
+                        2. Jak brzmi nazwisko panieńskie Aliny Krawczyk
+                    </div>
+
+
+                   
+                    <label>
+                        <div class="odp bad" id="pyt2odp1">
+                            <input type="radio" name="answer2" id="wyboar" value="a" onclick = "kolor(2)">
+                            <strong>a.</strong> aaa
+                        </div>
+                    </label>
+                    
+                    
+                    <label>
+                        <div class="odp bad" id="pyt2odp2">
+                            <input type="radio" name="answer2" id="wybor" value="b" onclick = "kolor(2)">
+                           
+                            <strong>b.</strong> Małecka
+                         </div>
+                    </label>
+                    
+                    <label> 
+                        <div class="odp bad" id="pyt2odp3">
+                            <input type="radio" name="answer2" value="c" id="poprawiny" onclick = "kolor(2)">
+                            <strong>c.</strong> Ambroziak
+                        </div>
+                    </label>
+                    
+                    <label> 
+                        <div class="odp bad popr" id="pyta2odp4">
+                            <input type="radio" name="answer2" value="d" onclick = "kolor(2)">
+                            <strong>d.</strong> Rudnik
+                        </div>
+                    </label>
+                     <button onclick="poznaj_odpowiedz();" type="button">Dalej</button><br>
+                        <p id=test></p>
+                
+               
+                    
+                </section>
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
+            </form>
+        </article>
+
+
+        </div>
+             </main>
+
+
+            <footer>Wszelkie prawa zastrzeżone. &copy 2019.</footer>
+       
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+    
+     <script src="script.js"></script> 
+    <script>$("input[type='radio']").change(function(){
+            if($(this).is(":checked")){
+                $(this).parent().addClass("redBackground"); 
+              
+            }else{
+                $(this).parent().removeClass("redBackground");  
+            }
+        });
+    </script>   
+</body>
+</html>
+      

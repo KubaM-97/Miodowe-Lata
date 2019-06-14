@@ -1,0 +1,234 @@
+function poznaj_odpowiedz()
+{
+       /*
+        POPRAWNE USTAWIANIE ZIELONEJ NA PODSTAWIE SELEKTORA */
+    var correct=document.querySelectorAll(".odp.popr"); //wybór
+       
+    if(correct.length > 0)
+    {
+        for(var i=0; i<correct.length; i++)
+        correct[i].className="odp green";
+    } 
+    
+    
+    
+   
+   /* for (var j=0; j<11; j++)
+        {
+            var nr_pytania = document.getElementsByClassName("odp bad redBackground");  //pobiera z klas¹ o b rBg, czyli te zaznaczone
+           
+            nr_pytania[j].setAttribute("class", "odp wrong");
+            
+            if(nr_pytania.length > 1)
+                {
+                    nr_pytania[j+1].setAttribute("class", "odp wrong");
+                }
+        //nr_pytania[0] - pierwszy znaleziony element
+        //nr_pytania[1] - drugi znaleziony element
+        }
+   /*
+        POPRAWNE USTAWIANIE ZIELONEJ NA PODSTAWIE SELEKTORA */
+    var correct=document.querySelectorAll(".odp.popr"); //wybór
+       
+    if(correct.length > 0)
+    {
+        for(var i=0; i<correct.length; i++)
+        correct[i].className="odp green";
+    }
+    
+    for (var j=0; j<11; j++)
+        {
+            
+            var nr_pytania = document.getElementsByClassName("odp bad redBackground");  //odp2 odp3 odp4
+            if(nr_pytania)
+            nr_pytania[j].setAttribute("class", "odp wrong");
+       
+        }
+    
+}
+function kolor()
+{  var zle=document.querySelectorAll(".odp.bad.redBackground"); //wybór
+       var input = document.getElementById("odp"+i);
+    if(zle.length == 1)
+    {
+        
+        for(var i=0; i<10; i++)
+        zle[i].className="odp";
+    }  //aa[0].className = "odp bad"
+            
+
+ 
+    /*var zle=document.querySelectorAll(".odp.bad"); 
+   for (i=1; i<=4; i++)
+       {
+           var a = document.getElementById("odp"+i) // odp1 odp2 odp3 odp4
+           if(a.checked == 'true')
+               {
+                   a.setAttribute("class", "odp wrong");
+               }
+       }
+   /* var answ_user = document.getElementById("poprawiny").checked;
+    var jajo = document.querySelectorAll(".odp.bad");
+    if (jajo.length > 1)
+        {
+            alert(jajo.length);// TRZEBA DODAÆ KLASÊ DIVOVI TRZECIEMU
+           var dolar=document.getElementsByClassName("odp bad");//t¹ liniê zmieniæ, by wskazywa³a zaznaczony obiekt
+            
+            if (dolar)
+                {
+                    alert("dwanaœcie");
+                }
+            var el=answ_user;//zmienna zawieraj¹ca id diva 3
+            dolar.className="odp wrong";
+        }
+    
+    
+    /*--
+    function poznaj_odpowiedz()
+{
+       /*
+        POPRAWNE USTAWIANIE ZIELONEJ NA PODSTAWIE SELEKTORA 
+    var correct=document.querySelectorAll(".odp.popr"); //wybór
+       
+    if(correct.length > 0)
+    {
+        for(var i=0; i<correct.length; i++)
+        correct[i].className="odp green";
+    }
+    
+    
+    var answ_user = document.querySelectorAll(".odp.bad");
+    
+    if(answ_user.length > 0)
+    {
+        for(var i=0; i<answ_user.length; i++)
+        answ_user[i].className="odp wrong";
+    }
+    
+    
+    //Dobrze ->var el=document.getElementById("one");
+        //    el.className="odp green";
+    
+   // var p = document.getElementById("two");
+   //     p.className="odp wrong";
+    
+    
+    
+    
+    
+    //    var el = document.getElementsByClassName("odp");
+        
+   // var p = el.className= "odp green";
+   
+        
+    /*if(el==="checked")
+        {
+            alert("Dobrze! Masz punkt!");
+        }
+    else alert("le!! Masz punkt!");*/
+    
+}
+    /*var answ_user = document.getElementsByClassName("odp");   //wybrana odpowiedŸ
+    var answ_correct = document.getElementsByClassName("popr") //poprawna odpowiedŸ
+    
+    //jeœli odp jest zaznaczona i nie jest to dobra odpowied¿
+    if((answ_user === "checked") && (answ_user === answ_correct ))  //zazn a
+        {
+            answ_user.className = "wrong";
+        }
+   
+
+
+function test()
+{
+    document.getElementById("test").innerHTML="Dobrze"
+}
+
+
+ /*$("input:checkbox").click(function(){
+    if ($("input:checkbox:checked").length > 1){
+      return false;
+   }
+
+}); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function kolor()
+{  
+   
+    var zle=document.querySelectorAll(".odp.bad.redBackground");
+    var dobre=document.querySelectorAll(".odp.bad.redBackground");
+   
+        
+            if (zle.length == 1)
+         {
+            for (var i=0; i<1; i++)
+             zle[i].className = "odp bad";
+             dobre[i].className = "odp bad popr";
+         } 
+            
+        
+}
+    
+    
+
+    for (var k=1; k<5; k++)
+        {
+             var el = document.getElementById("odp"+k);
+            el.addEventListener('onclick', kolor, false)
+        }
+   
+
+function poznaj_odpowiedz()
+{
+     
+    var ksak = document.getElementsByClassName("odp popr redBackground");
+       
+           document.getElementById("test").textContent = "Brawo zdoby³eœ " + ksak.length + " pkt!" 
+  
+       // POPRAWNE USTAWIANIE ZIELONEJ NA PODSTAWIE SELEKTORA 
+    var correct=document.querySelectorAll(".odp.popr"); //wybór
+       
+    if(correct.length > 0)
+    {
+        for(var i=0; i<correct.length; i++)
+        correct[i].className="odp green";
+    } 
+    var correct=document.querySelectorAll(".odp.popr"); //wybór
+       
+    if(correct.length > 0)
+    {
+        for(var i=0; i<correct.length; i++)
+        correct[i].className="odp green";
+    }
+    
+    
+    for (var j=0; j<11; j++)
+        {
+            
+            var nr_pytania = document.getElementsByClassName("odp bad redBackground");  //odp2 odp3 odp4
+            if(nr_pytania)
+            nr_pytania[j].setAttribute("class", "odp wrong");
+       
+        }
+}
