@@ -11,16 +11,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap&subset=latin-ext" rel="stylesheet">
     
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    
+    <link rel="icon" href="img/main_picture.ico">
+
+  
     <script src=""></script>
 </head>
 <body>
     
     <header>
         
-        <nav class="navbar navbar-light bg-secondary navbar-expand-lg">
+        <nav class="navbar navbar-light bg-warning navbar-expand-lg">
          
-          <a class="navbar-brand" href = "index.html"> Miód </a>  
+          <a class="navbar-brand" href = "index.html"> <img src="img/logo.jpg" alt="logo">  </a>  
          
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu"
                 aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
@@ -29,22 +36,22 @@
             
             <div class="collapse navbar-collapse" id="mainmenu">
               
-               <ul class="navbar-nav mr-auto">
+               <ul class="navbar-nav mr-auto nawbar">
                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" title="">Strona Główna</a>
+                    </li>
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link" href="geneza.html" title="">Geneza</a>
+                    </li>
+                    
                     <li class="nav-item active">
-                        <a class="nav-link" href="#" title="">Strona Główna</a>
-                    </li>
-                    
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#" title="">Geneza</a>
-                    </li>
-                    
-                    <li class="nav-item ">
-                        <a class="nav-link dropdown-toggle" href="#" title="">Bohaterowie</a>
+                        <a class="nav-link text-primary" href="#" title="">Bohaterowie</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="#" title="">Subiektywne TOP 5</a>
+                        <a class="nav-link" href="subiektywne.html" title="">Subiektywne TOP 5</a>
                     </li>
                     
                     <li class="nav-item">
@@ -56,13 +63,7 @@
                     </li>
 
                </ul>
-                
-                <form class="form-inline" action="#" method="post" enctype="multipart/form-data">
-                    
-                    <input class="form-control  mr-2" type="search" placeholder="Wyszukaj" aria-label="Wyszukaj">
-                    
-                    <button class="btn btn-light" type="submit">Znajdź</button>
-                </form>
+                                
             </div>
         </nav>
         
@@ -79,7 +80,7 @@
         <main>
            <div class="row lista" id="lista">
               
-               <div class="col-md-3 col-sm-6">
+               <div class="col-lg-2 offset-lg-1">
                    <li><a href="#Główni">Główni bohaterowie</a>
                         <ol>
                             <li><a href="#Karol">Karol Krawczyk</a></li>
@@ -90,36 +91,48 @@
                     </li>  
                 </div>
                 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-2">
                     <li><a href="#Kamienica">Mieszkańcy kamienicy</a>
                         <ol>
-                            <li><a href="#">Roman Kurski</a></li>
-                            <li><a href="#">Obrochtowa</a></li>
-                            <li><a href="#">Grzelakowa</a></li>
-                            <li><a href="#">Bachor 1</a></li>
+                            <li><a href="#Kurski">Roman Kurski</a></li>
+                            <li><a href="#Grzelakowa">Grzelakowa</a></li>
+                            <li><a href="#Obrochtowa">Obrochtowa</a></li>
+                            <li><a href="#Ruda">Ruda</a></li>
+                            <li><a href="#Karolina">Karolina</a></li>
+                            <li><a href="#Tomek">Tomek Borowski</a></li>
                         </ol>
                     </li>
                 </div>
                 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-2">
                     <li><a href="#Zajezdnia">Pracownicy zajezdni</a>
                         <ol>
-                            <li><a href="#">Marszałek</a></li>
-                            <li><a href="#">Barczak</a></li>
-                            <li><a href="#">Poldek Misiak</a></li>
-                            <li><a href="#">Bachor 1</a></li>
-                            <li><a href="#">Bachor 1</a></li>
+                            <li><a href="#Marszałek">Marszałek</a></li>
+                            <li><a href="#Barczak">Barczak</a></li>
+                            <li><a href="#Janek">Janek</a></li>
+                            <li><a href="#Staś">Staś</a></li>
+                            <li><a href="#Poldek">Poldek Misiak</a></li>
+                        </ol>
+                    </li>  
+                </div> 
+                <div class="col-lg-2">
+                    <li><a href="#Klub">Klub Sierżantów</a>
+                        <ol>
+                            <li><a href="#Zdobysław">Supersierżant</a></li>
+                            <li><a href="#Zaradek">Zaradek</a></li>
+                            <li><a href="#Kecik">Kecik</a></li>
+                            <li><a href="#Trzmielewski">Trzmielewski</a></li>
                         </ol>
                     </li>  
                 </div>
                 
-                <div class="col-md-3 col-sm-6">
-                    <li>Pozostali bohaterowie
+                <div class="col-lg-2">
+                    <li><a href="#Pozostali">Pozostali bohaterowie</a>
                          <ol>
-                            <li><a href="#">Teściowa</a></li>
-                            <li><a href="#">Pamela Marszałek</a></li>
-                            <li><a href="#">Doktor Zawisza</a></li>
-                            <li><a href="#">Inspektor Kopek</a></li>
+                            <li><a href="#Teściowa">Teściowa</a></li>
+                            <li><a href="#Pamela">Pamela Marszałek</a></li>
+                            <li><a href="#Zawisza">Doktor Zawisza</a></li>
+                            <li><a href="#Kopek">Inspektor Kopek</a></li>
                          </ol>
                     </li>
                 </div>
@@ -129,7 +142,7 @@
             
             
 
-        <article>
+        <article class = "actors">
           
            <section class="content nowe" id="Główni">
                 Główni bohaterowie
@@ -143,52 +156,688 @@
                
                    <div class="col-lg-4">
 
-                   <figure>
-                    <img src="img/karol-krawczyk.jpg"> 
-                    <figcaption>Karol Krawczyk</figcaption>
-                   </figure>
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/karol-krawczyk6.jpg"> 
+                        </div>
+                        <figcaption>Karol Krawczyk</figcaption>
+                       </figure>
 
                    </div>
             
                    <div class="col-lg-8">
-                       <p><strong>Karol Krawczyk</strong>, czyli najsłynniejszy motorniczy w kraju. Kojarzony przede wszystkim z linią nr18. Karol jest człowiekiem pracowitym, miłującym swoją pracę, szczerym i uczciwym, ale przy tym do bólu naiwnym i gapowatym, szukającym każdej możliwej okazji do zarobku i osiągnięcia zawodowego sukcesu. Wspomniana głupota i naiwność przejawia się praktycznie w każdym odcinku, co ,w połączeniu z jego nerwowością, prowadzi do wielu zabawnych sytuacji. Darzy olbrzymim respektem swojego dyrektora, jednocześnie nienawidzi jego zastępcę - kierownika Barczaka. Skłócony z całą rodziną, zarówno swoją jak i (przede wszystkim) swojej małżonki, z teściową na czele. <br> Karol jest Członkiem Klubu Sierżantów Elitarnych Jednostek Desantowych, w którym pełni rolę skarbnika i honorowego kwatermistrza. W wolnych chwilach uwielbia grać w bilard, zawodnik drużyny 3 ligi szóstek FC Albatros (na pozycji goalkeepera)zdj kosz, bilarda, wojska . Skąpy nerwowy, naiwny, turbo-uparty, jak coś postanowi, to bardzo ciężko jest to nakłonić do zmiany decyzji. Zazwyczaj sam musi się przekonać co do swoich błędów. Boi się zastrzyków. Bojaźliwy. W swoje intrygi i pomysły zawsze stara się wciągnąć Tadeusza, który zwykle stara się go odwieść od głupiego pomysłu. Jego cechą charakterystyczną jest otyłość, która jest obiektem żartów wszystkich bohaterów serialu. </p> 
+                       <p><strong>Karol Krawczyk</strong>, czyli najsłynniejszy motorniczy w Polsce. Kojarzony przede wszystkim z linią nr18. Karol jest człowiekiem pracowitym, miłującym swoją pracę, szczerym i uczciwym, ale przy tym do bólu naiwnym i gapowatym, szukającym każdej możliwej okazji do zarobku i osiągnięcia zawodowego sukcesu. Wspomniana głupota i naiwność przejawia się praktycznie w każdym odcinku, co , w połączeniu z jego nerwowością, prowadzi do wielu nieoczekiwanych splotów akcji. Darzy olbrzymim respektem swojego dyrektora, jednocześnie nienawidzi jego zastępcę - kierownika Barczaka. Skłócony z całą rodziną, zarówno swoją jak i (przede wszystkim) swojej małżonki, z teściową na czele. Członek Klubu Sierżantów Elitarnych Jednostek Desantowych, w którym pełni rolę skarbnika i honorowego kwatermistrza. W wolnych chwilach uwielbia grać w bilard, a także zawodnik drużyny 3 ligi szóstek FC Albatros (na pozycji bramkarza). Turbo-uparty, jak coś postanowi, to bardzo ciężko jest go nakłonić do zmiany decyzji. Zazwyczaj sam musi się przekonać co do swoich błędów. Boi się zastrzyków. Bojaźliwy. W swoje intrygi i pomysły zawsze stara się wciągnąć Tadeusza, który zwykle stara się go odwieść od głupiego pomysłu. Jego cechą charakterystyczną jest otyłość, która często jest obiektem żartów wszystkich bohaterów serialu. </p> 
                    </div>
                    
                </div>
             
 
-               <div class="row no-gutters">
-                   <div class="col-lg-4">
-                       <img src="img/karol-krawczyk1.jpg" alt="op">
-                   </div>
-
-                   <div class="col-lg-4">
-                       <img src="img/karol-krawczyk2.jpg" alt="op">
-                   </div>
-
-                   <div class="col-lg-4">
-                       <img src="img/karol-krawczyk3.jpg" alt="op">
-                   </div>
+               <div class="gallery bohaterowie">
+               <div class="row">
+               
+                       <div class="col-lg-4">
+                               <div class="powiekszenie_zdjecia">                  <a href="img/Bohaterowie/karol-krawczyk7.jpg" data-lightbox="mygallery">
+                               <img src="img/Bohaterowie/karol-krawczyk7.jpg">
+                               </a>
+                           </div>
+                       </div>
+                        
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/karol-krawczyk4.jpg" data-lightbox="mygallery"><img src="img/Bohaterowie/karol-krawczyk4.jpg"></a> 
+                           </div>
+                       </div>
+                       
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/karol-krawczyk5.jpg" data-lightbox="mygallery"><img src="img/Bohaterowie/karol-krawczyk5.jpg"></a>
+                           </div>
+                       </div>
+                   
+               </div>
                </div>
                
            </section>
            
            
            
+           
+           <section class="content" id="Tadek">
+           
+               <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Tadeusz%20Norek5.jpg"> </div>
+                        <figcaption>Tadeusz Norek</figcaption>
+                       </figure>
+
+                   </div>
+                   <div class="col-lg-8">
+                       <p><strong>Tadeusz Norek</strong> – inżynier instalacji podziemnych lub, jak kto woli, pracownik miejskich kanalizacji. Najlepszy i de facto jedyny przyjaciel Karola. Bardzo lojalny, mimo iż był często obrażany, a wręcz upokarzany przez Karola, to zawsze stał za nim murem i wspierał go, jeśli zaszła taka potrzeba. Z Karolem znają się już od czasów szkolnych. Obydwaj nie grzeszą inteligencja, co często prowadzi do różnych zabawnch sytuacji. Chuderlawy, nieco nieśmiały, zazwyczaj spokojny. Także uwielbia grać w bilard, także jest zawodnikiem drużyny Albatrosów (pozycja skrzydłowego) i także jest członkiem Klubu Sierżantów. Mieszka wraz żoną piętro nad Krawczykami. Cechuje go wysoka kultura osobista, chęć pomocy innym oraz regularność w wyjadaniu zapasów z lodówki Krawczyków. Terroryzowany przez małżonkę. Popełnia błędy ortograficzne. Ogląda kreskówki. Zawsze daje się namówić Karolowi na dziwne i nie do końca przemyślane pomysły (często dotyczą przebierania się lub udawania kogoś innego).
+                   </div>
+                   
+               </div>
+            
+
+               <div class="gallery bohaterowie">
+               <div class="row">
+               
+                       <div class="col-lg-4">
+                               <div class="powiekszenie_zdjecia">                  <a href="img/Bohaterowie/Tadeusz%20Norek7.jpg" data-lightbox="mygallery2">
+                               <img src="img/Bohaterowie/Tadeusz%20Norek7.jpg">
+                               </a>
+                           </div>
+                       </div>
+                        
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Tadeusz%20Norek8.jpg" data-lightbox="mygallery2"><img src="img/Bohaterowie/Tadeusz%20Norek8.jpg"></a> 
+                           </div>
+                       </div>
+                       
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Tadeusz%20Norek9.jpg" data-lightbox="mygallery2"><img src="img/Bohaterowie/Tadeusz%20Norek9.jpg"></a>
+                           </div>
+                       </div>
+                   
+               </div>
+               </div>
+               
+           </section>
+           
+           
+           
+           
+             <section class="content" id="Ala">
+           
+               <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Alina%20Krawczyk6.jpg"> </div>
+                        <figcaption>Alina Krawczyk</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Alina Krawczyk</strong> – żona Karola Krawczyka, typowa kura domowa. Alina to mądra, trzeźwo myśląca kobieta z poczuciem humoru i ciętą ripostą. Często narzeka na swój los oraz na to, że mąż nie pozwala jej pracować ani nawet wyjść z domu. Nie rozumie zainteresowań męża piłką nożną i bilardem, a Klub Sierżanta, którego Karol jest członkiem, uważa za durnowaty. Zawsze słusznie odradza mężowi wiele jego pomysłów, twierdząc, że nic dobrego z tego nie wyjdzie. Potrafi zagiąć Karola jednym inteligentnym zdaniem. Często, wraz z Danką, knuje intrygę przeciwko mężom. Czasami bywa bardziej cyniczna i złośliwa od Karola, ale mimo tego bardzo go kocha. W przeciwieństwie do niego, jest bardzo tolerancyjna i szanuje jego rodzinę. Nie ma prawa jazdy. Świetnie gotuje, stara się oszczędzać pieniądze, by wyremontować mieszkanie, wymienić stare, rozpadające się meble czy chodzić w nowych ubraniach. Od 96 odcinka grana przez inną aktorkę, co stało się swego rodzaju umowną wśród opinii widzów epoką dzielącą odcinki te śmieszniejsze od tych mdłych.
+                   </div>
+                   
+               </div>
+            
+
+               <div class="gallery bohaterowie">
+               <div class="row">
+               
+                       <div class="col-lg-4">
+                               <div class="powiekszenie_zdjecia">                  <a href="img/Bohaterowie/Alina%20Krawczyk5.jpg" data-lightbox="mygallery3">
+                               <img src="img/Bohaterowie/Alina%20Krawczyk5.jpg">
+                               </a>
+                           </div>
+                       </div>
+                        
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Alina%20Krawczyk3.jpg" data-lightbox="mygallery3"><img src="img/Bohaterowie/Alina%20Krawczyk3.jpg"></a> 
+                           </div>
+                       </div>
+                       
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Alina%20Krawczyk4.jpg" data-lightbox="mygallery3"><img src="img/Bohaterowie/Alina%20Krawczyk4.jpg"></a>
+                           </div>
+                       </div>
+                   
+               </div>
+               </div>
+               
+           </section>
+           
+           
+           
+           
+              <section class="content" id="Danka">
+           
+               <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Danuta%20Norek7.jpg"> </div>
+                        <figcaption>Danuta Norek</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong id="Danka">Danuta Norek</strong> – „TADZIK, NA GÓRĘ!!!”. Pierwsze słowa jakie z automatu kojarzą się z postacią graną przez Danutę Chotecką. Dominująca w małżeństwie, zadziorna babka z silnym charakterem. Najbliższa przyjaciółka Alinki. Męża trzyma krótko, umie przywołać go do porządku poprzez głośne wołanie jego imienia. Ponadto często go bije, a czasem rzuca w niego przedmiotami. Zwykle kłótnie państwa Norków słychać w mieszkaniu Krawczyków. Po każdej awanturze Norek przychodzi do Karola cały obolały (zazwyczaj ma ślady na twarzy i bolą go ręce). Danuta względem męża zachowuje się nieszczerze, wydaje jego pieniądze i rzadko kiedy mu ustępuje. Często rozmawia o mężu z Aliną, szukając u niej małżeńskiej porady bądź knując wraz z nią jakieś spiski. Jest bardzo konsekwentna, mimo to kocha swego partnera. Nie przepada za Karolem, z wzajemnością. Pasjonuje ją prasa kobieca i plotkowanie. 
+                   </div>
+                   
+               </div>
+            
+
+               <div class="gallery bohaterowie">
+               <div class="row">
+               
+                       <div class="col-lg-4">
+                               <div class="powiekszenie_zdjecia">                  <a href="img/Bohaterowie/Danuta%20Norek6.jpg" data-lightbox="mygallery4">
+                               <img src="img/Bohaterowie/Danuta%20Norek6.jpg">
+                               </a>
+                           </div>
+                       </div>
+                        
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Danuta%20Norek5.jpg" data-lightbox="mygallery4"><img src="img/Bohaterowie/Danuta%20Norek5.jpg"></a> 
+                           </div>
+                       </div>
+                       
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Danuta%20Norek3.jpg" data-lightbox="mygallery4"><img src="img/Bohaterowie/Danuta%20Norek3.jpg"></a>
+                           </div>
+                       </div>
+                   
+               </div>
+               </div>
+               
+           </section>
         </article>
         
-    </main>
+        <article class = "actors">
+            <section class="content nowe" id="Kamienica">
+                Pozostali mieszkańcy kamienicy
+            </section>
+            
+            <section class="content" id="Kurski">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Roman%20Kurski2.jpg"> </div>
+                        <figcaption>Roman Kurski</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Roman Kurski</strong> – żonaty, bezrobotny kryminalista, specjalizuje się w drobnych kradzieżach, włamaniach i innych oszustwach. Mieszka pod numerem 5. Niemal zawsze chodzi w wyróżniającym się pomarańczowym podkoszulku. Uzależniony od alkoholu, zapalony kibic Legii Warszawa, choć prawdę mówiąc, bardziej interesują go ustawki z kibolami innych drużyn. Wiemy, że ma żonę. Często nawiązuje do wspomnięń z Wronek, Rawicza, czy Białołęki. Choć bywa niebezpieczny, ma swoje zasady, których bezwzględnie przestrzega. Przede wszystkim chodzi tutaj o szacunek wobec kobiet i lojalność wobec sąsiadów. Wzbudza ogólną pogardę.</p>
+                   </div>
+                   
+               </div>
+            
+
+               <div class="gallery bohaterowie">
+               <div class="row">
+               
+                       <div class="col-lg-4">
+                               <div class="powiekszenie_zdjecia">                  <a href="img/Bohaterowie/Roman%20Kurski.png" data-lightbox="mygallery5">
+                               <img src="img/Bohaterowie/Roman%20Kurski.png">
+                               </a>
+                           </div>
+                       </div>
+                        
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Roman%20Kurski21.png" data-lightbox="mygallery5"><img src="img/Bohaterowie/Roman%20Kurski21.png"></a> 
+                           </div>
+                       </div>
+                       
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Roman%20Kurski3.png" data-lightbox="mygallery5"><img src="img/Bohaterowie/Roman%20Kurski3.png"></a>
+                           </div>
+                       </div>
+                   
+               </div>
+               </div>
+               
+             
+            </section>
+            <section class="content" id="Grzelakowa">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Grzelakowa.jpg"> </div>
+                        <figcaption>Grzelakowa</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Helena Grzelak</strong> – plotkarka i krzykaczka. Posiada awanturnicze usposobienie. Kłóci się ze swoimi sąsiadami, zwłaszcza z Karolem i Tadziem. We wszystkich sporach staje po stronie kobiet, obwiniając mężczyzn za całe zło tego świata. Mimo to ma skłonności do romansów i słabość do cudzych mężczyzn.</p>
+                   </div>
+                   
+               </div>
+            
+            </section>
+            <section class="content" id="Obrochtowa">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Obrochtowa.jpg"> </div>
+                        <figcaption>Obrochtowa</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Obrochtowa</strong> – stara sąsiadka Krawczyka i Norka, z którymi często się kłóci. Jej rolę odegrała jedna z najbardziej rozpoznawalnych polskich aktorek, Krystyna Feldman. Występuje w zaledwie jednej scenie, w odcinku pt. "Odpowiedź za 99.000 zł", gdzie Karol przygotowywał się do teleturnieju z muzyki folklorowej. Krawczykowie i Norkowie wspominają o niej czasem przy różnych okazajch w innych odcinkach, np. Karol rozmawia z nią przez domofon w odcinku pt. „Telefon do dozorcy”. Sprawia wrażenie szalonej.</p>
+                   </div>
+                   
+               </div>
+                           
+             
+            </section>
+            <section class="content" id="Ruda">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Ruda.jpg"> </div>
+                        <figcaption>Ruda</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Mariola "Ruda" Majdan</strong> ma rude włosy oraz narzeczonego. Jest osobą zmysłową i ponętną. Swą urodą i prowokacyjnym zachowaniem uderza do głowy mężczyznom, w tym Tadkowi i Karolowi.</p>
+                   </div>
+                   
+               </div>
+            
+               
+             
+            </section>
+            <section class="content" id="Karolina">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Karolina.jpg"> </div>
+                        <figcaption>Karolina Mańkowska</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Karolina</strong> – nastoletnia sąsiadka Krawczyków. Bardzo energiczna. Nie lubi się uczyć. Swój wolny czas woli poświęcać na zabawę i dobrą muzykę.</p>
+                   </div>
+                   
+               </div>
+                           
+             
+            </section>
+            <section class="content" id="Tomek">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Tomek.jpg"> </div>
+                        <figcaption>Tomek</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Tomek</strong> – jest naiwnym chłopakiem wierzący we wszystko, co usłyszy od Karola. Wychowuje się bez ojca.</p>
+                   </div>
+                   
+               </div>
+            
+               
+             
+            </section>
+        </article>
+
+        
+        <article class = "actors">
+           
+           <section class="content nowe" id="Zajezdnia">
+                Pracownicy zajezdni
+            </section>
+            
+            <section class="content" id="Marszałek">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Jan%20Marsza%C5%82ek3.jpg"> </div>
+                        <figcaption>Marszałek</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Jan Marszałek</strong> – dyrektor Zakładu Komunikacji Miejskiej. Dwukrotnie żonaty. Jest kulturalny, uprzejmy i elokwentny. Posiada bardzo bogate słownictwo. Przez jakiś czas mieszkał w Ameryce. Gra w golfa, kręgle oraz w pokera. Ciągle obiecuje Karolowi upragniony awans na niskopodłogowce, ale nigdy nie dotrzymuje słowa.</p>
+
+                   </div>
+                   
+               </div>
+            
+
+               <div class="gallery bohaterowie">
+               <div class="row">
+               
+                       <div class="col-lg-4">
+                               <div class="powiekszenie_zdjecia">                  <a href="img/Bohaterowie/Jan%20Marsza%C5%82ek1.jpg" data-lightbox="mygallery7">
+                               <img src="img/Bohaterowie/Jan%20Marsza%C5%82ek1.jpg">
+                               </a>
+                           </div>
+                       </div>
+                        
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/J.jpg" data-lightbox="mygallery7"><img src="img/Bohaterowie/Jan%20Marsza%C5%82ek2.jpg"></a> 
+                           </div>
+                       </div>
+                       
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Jan%20Marsza%C5%82ek5,jpg.png" data-lightbox="mygallery7"><img src="img/Bohaterowie/Jan%20Marsza%C5%82ek5,jpg.png"></a>
+                           </div>
+                       </div>
+                   
+               </div>
+               </div>
+               
+             
+            </section>
+            <section class="content" id="Barczak">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Kierownik%20Barczak.jpg"> </div>
+                        <figcaption>Kierownik Barczak</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Kierownik Barczak</strong> – kierownik w zakładzie komunikacji miejskiej, przełożony Karola. Łysieje. Nie jest lubiany przez tramwajarzy, a przez wspomnianego Karola wręcz znienawidzony. Podlizuje się Marszałkowi, zawsze obciąża Karola nieznośnymi obowiązkami. wymierza mu kary oraz posuwa się do oszustw, byleby tylko zdyskredytować go w oczach Marszałka. Mimo pozornej uprzejmości, wyraźnie nie lubi Karola Krawczyka</p>
+                   </div>
+                   
+               </div>
+            
+
+               <div class="gallery bohaterowie">
+               <div class="row">
+               
+                       <div class="col-lg-4">
+                               <div class="powiekszenie_zdjecia">                  <a href="img/Bohaterowie/Kierownik%20Barczak1.jpg" data-lightbox="mygallery8">
+                               <img src="img/Bohaterowie/Kierownik%20Barczak1.jpg">
+                               </a>
+                           </div>
+                       </div>
+                        
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Kierownik%20Barczak2.jpg" data-lightbox="mygallery8"><img src="img/Bohaterowie/Kierownik%20Barczak2.jpg"></a> 
+                           </div>
+                       </div>
+                       
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Kierownik%20Barczak3.jpg" data-lightbox="mygallery8"><img src="img/Bohaterowie/Kierownik%20Barczak3.jpg"></a>
+                           </div>
+                       </div>
+                   
+               </div>
+               </div>
+               
+             
+            </section>
+            
+            <section class="content" id="Janek">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Janek.jpg"> </div>
+                        <figcaption>Janek</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Janek</strong> – motorniczy, hoduje psy. Jest niskiego wzrostu. Gra w FC Albatros. Z Karolem dogaduje się dość dobrze.</p>
+                   </div>
+                   
+               </div>
+                           
+             
+            </section>
+            
+            <section class="content" id="Staś">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Stanis%C5%82aw.jpg"> </div>
+                        <figcaption>Staś</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Staś</strong> – szwagier Karola. Mąż Agaty - siostry Aliny. Uległy wobec swojej żony. Także zawodnik FC Albatros.</p>
+
+                   </div>
+                   
+               </div>
+            </section>
+            <section class="content" id="Poldek">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Poldek%20Misiak.jpg">
+                     </div>
+                        <figcaption>Poldek</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p>Leopold Misiak dla przyjaciół <strong>Poldek</strong> – motorniczy. Nie przepada za Karolem (z wzajemnością), jednak, jeśli trzeba, potrafią dojść do porozumienia. Umie grać w kręgle, jest szarmancki, podoba się Alinie i Dance. Leopold Misiak jest wysokim mężczyzną. Nie przepada za Karolem, dokucza mu słownie lub też wycina mu różne numery. W pracy często podlizuje się kierownikowi Barczakowi.</p>
+
+                   </div>
+                   
+               </div>
+         
+               
+             
+            </section>
+        </article>
+        
+        <article class = "actors">
+           <section class="content nowe" id="Pozostali">
+                Pozostałe postacie
+            </section>
+            <section class="content" id="Teściowa">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Tesciowa.jpg"> </div>
+                        <figcaption>Teściowa</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Teściowa</strong> – trzyma swego męża pod pantoflem. Nie może on nawet, bez jej wiedzy, opuścić mieszkania. Wyjątkowo nie lubi swego zięcia, z wzajemnością, wobec którego pozwala sobie na często wyjątkowo złośliwe żarty. Najczęściej owe żarty dotyczą tuszy Karola. Ponadto, za każdym razem, kiedy ich odwiedza, wytyka Karolowi jego wady. Uważa, że Alina, popełniła błąd, wychodząc za Karola Krawczyka, dlatego namawia ją do rozwodu i przypomina o Henryku Majewskim, (w starszych odcinkach, Patryczku Bukowskim) w którym widzi idealnego kandydata na męża dla swojej córki. Mieszka w Milanówku przy ulicy Czadzkiego 7 m. 5. Pierwszy raz pojawia się w odcinku 6.</p>
+                   </div>
+                   
+               </div>
+            
+
+               <div class="gallery bohaterowie">
+               <div class="row">
+               
+                       <div class="col-lg-4">
+                               <div class="powiekszenie_zdjecia">                  <a href="img/Bohaterowie/Tesciowa3.jpg" data-lightbox="mygallery9">
+                               <img src="img/Bohaterowie/Tesciowa3.jpg">
+                                   </a>
+                           </div>
+                       </div>
+                        
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Tesciowa2.jpg" data-lightbox="mygallery9"><img src="img/Bohaterowie/Tesciowa2.jpg"></a> 
+                           </div>
+                       </div>
+                       
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Tesciowa4.jpg" data-lightbox="mygallery9"><img src="img/Bohaterowie/Tesciowa4.jpg"></a>
+                           </div>
+                       </div>
+                   
+               </div>
+               </div>
+               
+             
+            </section>
+            
+            
+            
+            <section class="content" id="Pamela">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Pamel%20Marsza%C5%82ek4.jpg"> </div>
+                        <figcaption>Pamela Marszałek</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Pamela Marszałek</strong> z d. Śliwa jest drugą żoną Jana Marszałka. Blondynka, przesadnie dba o urodę. Wita i żegna się charakterystycznym zwrotem „Hi!”. Męża nazywa „Kłapouszkiem”. Lubi udzielać się społecznie i charytatywnie. Całe dnie spędza w salonach piękności, łatwo się denerwuje. Nie umie gotować, nie lubi też sprzątać. Ma skłonności do flirtu z innymi mężczyznami, a o mężu mówi, że jest mało męski. Żąda też od niego, by spełniał wszystkie jej zachcianki. Byle drobnostka wystarczy, by wyprowadzić ją z równowagi. Jest przy tym próżna i nieinteligentna, nie rozumie kawałów. Obraz typowej blondynki.</p>
+
+                   </div>
+                   
+               </div>
+            
+
+               <div class="gallery bohaterowie">
+               <div class="row">
+               
+                       <div class="col-lg-4">
+                               <div class="powiekszenie_zdjecia">                  <a href="img/Bohaterowie/Pamela%20Marsza%C5%82ek1.jpg" data-lightbox="mygallery10">
+                               <img src="img/Bohaterowie/Pamela%20Marsza%C5%82ek1.jpg">
+                               </a>
+                           </div>
+                       </div>
+                        
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Pamela%20Marsza%C5%82ek2.jpg" data-lightbox="mygallery10"><img src="img/Bohaterowie/Pamela%20Marsza%C5%82ek2.jpg"></a> 
+                           </div>
+                       </div>
+                       
+                       <div class="col-lg-4">
+                           <div class="powiekszenie_zdjecia">                       <a href="img/Bohaterowie/Pamela%20Marsza%C5%82ek.jpg" data-lightbox="mygallery10"><img src="img/Bohaterowie/Pamela%20Marsza%C5%82ek.jpg"></a>
+                           </div>
+                       </div>
+                   
+               </div>
+               </div>
+               
+             
+            </section>
+            
+            <section class="content" id="Zawisza">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Zawisza.jpg"> </div>
+                        <figcaption>Doktor Zawisza</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Doktor Zawisza</strong> – lekarz rodzinny głównych bohaterów, pasjonat psychiatrii i hipnozy. Lubi eksperymentować na Karolu i Tadku – uważa ich za niesamowity przypadek. Jest również naukowcem szukającym nowych metod leczenia. Mimo że zajmuje się psychiatrią, sam zachowuje się, jakby nie był do końca normalny - zwykle przejawia objawy tego właśnie zaburzenia psychicznego, jakim się aktualnie zajmuje. Doktor Zawisza ubiera się na czarno, czym budzi asocjacje z Zawiszą Czarnym. Marzy o zdobyciu nagrody Nobla. W jednym z odcinków wyznaje, iż gra w klubie FC Ambulans.</p>
+
+                   </div>
+                   
+               </div>
+            
+             
+            </section>
+            <section class="content" id="Kopek">
+             <div class="row">
+               
+                   <div class="col-lg-4">
+
+                       <figure>
+                       <div class="powiekszenie_zdjecia">
+                           <img src="img/Bohaterowie/Inspektor%20Kopek.jpg"> </div>
+                        <figcaption>Inspektor Kopek</figcaption>
+                       </figure>
+
+                   </div>
+            
+                   <div class="col-lg-8">
+                       <p><strong>Inspektor Kopek</strong> – policjant operacyjny z wydziału kryminalnego. Ma poważną wadę wymowy – jąka się. Chodzi zazwyczaj w płaszczu i kapeluszu.</p>
+                   </div>
+                   
+               </div>
+            
+
+                           
+             
+            </section>
+            
+       
+        </article>
+        
+        </main>
     
-    <a href="#lista"><img src="img/scroll-to-top.jpeg" class="scroll" ></a>
+    
         <footer>Wszelkie prawa zastrzeżone. &copy 2019.</footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+   
+    
+    
+    <a href="#"><img class="scroll" src="img/scroll-to-top.png"></a>
+    
+     <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     
     
 	
 	
 	<script src="js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
-      

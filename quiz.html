@@ -7,149 +7,576 @@
     <meta name="keywords" content="Miodowe Lata, Karol Krawczyk, Tadeusz Norek, Alina Krawczyk, Danuta Norek">
     <meta name="viewport" content="width=device-width" initial=>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    
-    <script>
-        function a(){
-        var sprawdz = document.getElementsByClassName("odp");
-        
-        if (sprawdz === "checked")
-           sprawdz.style.color="red";}
-    </script>
-    
+    <link rel="icon" href="img/main_picture.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
 </head>
 <body>
     
-    <main>
+    <nav class="navbar navbar-light bg-warning navbar-expand-lg">
+         
+          <a class="navbar-brand" href = "index.html"> <img src="img/logo.jpg" alt="logo">  </a>  
+         
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu"
+                aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                 <span class="navbar-toggler-icon"></span>
+            </button>   
+            
+            <div class="collapse navbar-collapse" id="mainmenu">
+              
+               <ul class="navbar-nav mr-auto nawbar">
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" title="">Strona Główna</a>
+                    </li>
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link" href="geneza.html" title="">Geneza</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="bohaterowie.html" title="">Bohaterowie</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="subiektywne.html" title="">Subiektywne TOP 5</a>
+                    </li>
+                    
+                   <li class="nav-item active">
+                        <a class="nav-link text-primary" href="#" title="quiz">Quiz</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="">Kontakt</a>
+                    </li>
+
+               </ul>
+                                
+            </div>
+        </nav>
         
         <div class="container">
             <!-- belka navbar -->
+        <main>
         
-    
         <article>
-            <header>Sprawdź swoją wiedzę!</header>
-            
+           <header class="quiz_header">
+               <p>Myślisz, że znasz serial "Miodowe Lata" na wylot? Jeśli tak, to odpowiedzenie na 10 poniższych pytań nie sprawi Ci najmniejszego problemu. Sprawdź swoją wiedzę!
+               </p>
+            </header>
+            <div id=test></div>
             <form method="POST" action="#" enctype="multipart/form-data">
-                <section>
-
+                        <!-- Pytanie 1 -->
+                <section class="quiz_section">
+            
                     <div class = "question">
                         1. Pod jakim adresem znajduje się mieszkanie Krawczyków?
                     </div>
 
+            
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp popr">
+                                <input type="radio" name="answer1" value="a">
+                                <strong>a.</strong> ul. Wolska 33/32
+                            </div>
+                        </label>
 
-                   
-                    <label>
-                        <div class="odp bad popr" id="pyta1odp1">
-                            <input type="radio" name="answer1" id="wyboar" value="a" onclick = "kolor(1)">
-                            <strong>a.</strong> ul. Wolska 32/33
-                        </div>
-                    </label>
-                    
-                    
-                    <label>
-                        <div class="odp bad" id="pyt1odp2">
-                            <input type="radio" name="answer1" id="wybor" value="b" onclick = "kolor(1)">
-                           
-                            <strong>b.</strong> ul. Wolska 31/33
-                         </div>
-                    </label>
-                    
-                    <label> 
-                        <div class="odp bad" id="pyt1odp3">
-                            <input type="radio" name="answer1" value="c" id="poprawiny" onclick = "kolor(1)">
-                            <strong>c.</strong> ul. Wolska 33/32
-                        </div>
-                    </label>
-                    
-                    <label> 
-                        <div class="odp bad" id="pyt1odp4">
-                            <input type="radio" name="answer1" value="d" onclick = "kolor(1)">
-                            <strong>d.</strong> ul. Wolska 33/23
-                        </div>
-                    </label>
-                       
-                    
 
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer1" value="b">
+                                <strong>b.</strong> ul. Wolska 31/33
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer1" value="c">
+                                <strong>c.</strong> ul. Wolska 32/33
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer1" value="d">
+                                <strong>d.</strong> ul. Wolska 33/23
+                            </div>
+                        </label>
+                    </div>
+                    <div class="quiz_solution">
+                        <p class="quiz_imagea">
+                           <img class="quiz_imagea" src="img/Quiz/quiz_img_1.png">
+                            Podczas słownej przepychanki pomiędzy Karolem, Tadkiem, a Myszką i W pewnym momencie Tadek proponuje walkę. Gdy Myszka pyta, gdzie mieszka Karol, na wypadek gdyby ten stchórzył, Tadek błyskawicznie odpowiada Wolska 33/32 (odc 57 pt."Karol Bombowiec Krawczyk").
+
+                        </p>
+                    </div>
                 </section>
                 
                 
                     <!-- Pytanie 2 -->
-                <section>
+                <section class="quiz_section">
                 
                     <div class = "question">
                         2. Jak brzmi nazwisko panieńskie Aliny Krawczyk
                     </div>
+            
+
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer2" value="a">
+                                <strong>a.</strong> Nie poznajemy nazwiska
+                            </div>
+                        </label>
 
 
-                   
-                    <label>
-                        <div class="odp bad" id="pyt2odp1">
-                            <input type="radio" name="answer2" id="wyboar" value="a" onclick = "kolor(2)">
-                            <strong>a.</strong> aaa
-                        </div>
-                    </label>
-                    
-                    
-                    <label>
-                        <div class="odp bad" id="pyt2odp2">
-                            <input type="radio" name="answer2" id="wybor" value="b" onclick = "kolor(2)">
-                           
-                            <strong>b.</strong> Małecka
-                         </div>
-                    </label>
-                    
-                    <label> 
-                        <div class="odp bad" id="pyt2odp3">
-                            <input type="radio" name="answer2" value="c" id="poprawiny" onclick = "kolor(2)">
-                            <strong>c.</strong> Ambroziak
-                        </div>
-                    </label>
-                    
-                    <label> 
-                        <div class="odp bad popr" id="pyta2odp4">
-                            <input type="radio" name="answer2" value="d" onclick = "kolor(2)">
-                            <strong>d.</strong> Rudnik
-                        </div>
-                    </label>
-                     <button onclick="poznaj_odpowiedz();" type="button">Dalej</button><br>
-                        <p id=test></p>
+                        <label>
+                            <div class="odp">
+                               <input type="radio" name="answer2" value="b">
+                               <strong>b.</strong> Małecka
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer2" value="c">
+                                <strong>c.</strong> Ambroziak
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp popr">
+                                <input type="radio" name="answer2" value="d">
+                                <strong>d.</strong> Rudnik
+                            </div>
+                        </label>
+                    </div>
                 
+                    <div class="quiz_solution">
+                        <p class="quiz_imagea">
+                           <img class="quiz_image_multi" src="img/Quiz/quiz_img_2a.png">
+                           <img class="quiz_image_multi" src="img/Quiz/quiz_img_2b.png">
+                           Wzrost przestępczości skłania Karola do założenia straży. Od każdej osoby wchodzącej do i wychodzącej z kamienicy wymagane jest okazanie dokumentu tożsamości. Jednak teściowa nie może znaleźć swojego dowodu. Po początkowych problemach Karol zaczyna spisywać dane swojej teściowej. Tam też pada nazwisko panieńskie i imię starszej pani: Zofia Rudnik (odc 62 pt."Ochroniarze").
+                        </p>
+                    </div>
+                </section>
+                
+                
+                
+                 <!-- Pytanie 3 -->
+                <section class="quiz_section">
+                
+                    <div class = "question">
+                        3. W odcinku pt. Pamela Marszałek, w związku z modernizacją warszawskiego ZOO, podarowała Krawczykom na przechowanie:
+                    </div>
+            
+            
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer3" value="a">
+                                <strong>a.</strong> Barana
+                            </div>
+                        </label>
+
+
+                        <label>
+                            <div class="odp popr">
+                                <input type="radio" name="answer3" value="b">
+                                <strong>b.</strong> Osła
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer3" value="c">
+                                <strong>c.</strong> Turonia
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer3" value="d">
+                                <strong>d.</strong> Lamę
+                            </div>
+                        </label>
+                    </div>
                
+                   <div class="quiz_solution">
+                        <p class="quiz_imagea">
+                           <img class="quiz_imagea" src="img/Quiz/quiz_img_3.png">
+                           <br><br>W odcinku 83 Pamela Marszałek przekazuje Karolowi pod opiekę Azorka.
+                        </p>
+                    </div>
+                </section>
+                
+                
+                  <!-- Pytanie 4 -->
+                <section class="quiz_section">
+                
+                    <div class = "question">
+                        4. Jakich potomków doczekali się główni bohaterowie w ostatnim odcinku?
+                    </div>
+
+            
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer4" value="a">
+                                <strong>a.</strong> Krawczykowie syna, Norkowie syna
+                            </div>
+                        </label>
+
+
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer4" value="b">
+                                <strong>b.</strong> Krawczykowie córkę, Norkowie córkę
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer4" value="c">
+                                <strong>c.</strong> Krawczykowie syna, Norkowie córkę
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp popr">
+                                <input type="radio" name="answer4" value="d">
+                                <strong>d.</strong> Krawczykowie córkę, Norkowie syna
+                            </div>
+                        </label>
+                    </div>
+                
+                    <div class="quiz_solution">
+                        <p class="quiz_imagea">
+                           <img class="quiz_imagea" src="img/Quiz/quiz_img_4.png">
+                           <br><br>Ostatnia scena ostatniego odcinka „Całkiem Nowe Lata Miodowe”
+                        </p>
+                    </div>
+                </section>
+                
+                
+                  <!-- Pytanie 5 -->
+                <section class="quiz_section">
+                
+                    <div class = "question">
+                        5. Którego z podanych aktorów nigdy nie ujrzeliśmy na scenie "Miodowych Lat"?
+                    </div>
+            
+            
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer5" value="a">
+                                <strong>a.</strong> Sławomir Pacek
+                            </div>
+                        </label>
+
+
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer5" value="b" >
+                                <strong>b.</strong> Jarosław Boberek
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp popr">
+                                <input type="radio" name="answer5" value="c">
+                                <strong>c.</strong> Mieczysław Morański
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer5" value="d">
+                                <strong>d.</strong> Andrzej Grabowski
+                            </div>
+                        </label>
+                    </div>
+                
+                    <div class="quiz_solution">
+                        
+                          <figure class="quiz_figure">
+                             <img src="img/Quiz/quiz_img_5a.png"><br>
+                             <figcaption>Sławomir Pacek</figcaption>
+                          </figure>
+                          
+                          <figure class="quiz_figure">
+                             <img src="img/Quiz/quiz_img_5b.png">
+                             <figcaption>Jarosław Boberek</figcaption>
+                          </figure>
+                          
+                          <figure class="quiz_figure">
+                             <img src="img/Quiz/quiz_img_5c.png">
+                             <figcaption>Andrzej Grabowski</figcaption>
+                          </figure>
+                        
+                    </div>
                     
                 </section>
-                <section></section>
-                <section></section>
-                <section></section>
-                <section></section>
-                <section></section>
-                <section></section>
+                
+                      
+                      
+                       <!-- Pytanie 6 -->
+                <section class="quiz_section">
+                
+                    <div class = "question">
+                       6. Gdzie znajduje się miejsce przedstawiane przy zakończeniu każdego odcinka "Miodowych Lat" (podczas końcowych napisów)?
+                    </div>
+            
+            
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer6" value="a">
+                                <strong>a.</strong> Centrum w stronę Metra Świętokrzyska
+                            </div>
+                        </label>
+
+
+                        <label>
+                            <div class="odp popr">
+                                <input type="radio" name="answer6" value="b">   <strong>b.</strong> Skrzyżowanie Woronicza z Wołoską
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer6" value="c">
+                                <strong>c.</strong> Plac Zbawiciela
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer6" value="d">
+                                <strong>d.</strong> Okopowa
+                            </div>
+                        </label>
+                    </div>
+                
+                  
+                    <div class="quiz_solution">
+                        
+                           
+                           <img class="quiz_image_multi" src="img/Quiz/quiz_img_6b.png">
+                           
+                           <iframe class="quiz_image_multi"                    
+                           src="https://www.google.com/maps/embed?pb=!4v1564104289737!6m8!1m7!1s8d2IrueMUC3fcrFfVubGjg!2m2!1d52.18872799534351!2d21.00215404480272!3f76.07597181641971!4f-0.9669563542191639!5f2.5103967395720486" width="400" height="360" frameborder="1" style="border:0" allowfullscreen></iframe>
+                            
+                            Widok z 2009 na skrzyżowaniu w kierunku wschodnim Woronicza z Wołoską. Można dostrzec kilka podobieństw: drzewo po prawej stronie, znak drogowy "Droga z pierwszeństwem" czy różowy budynek w oddali.
+                        
+                    </div>
+                    
+                </section>
+                
+                        <!-- Pytanie 7 -->
+                <section class="quiz_section">   
+                    <div class = "question">
+                        7. Co studiował ojciec Aliny?
+                    </div>
+            
+            
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer7" value="a">
+                                <strong>a.</strong> Psychologię
+                            </div>
+                        </label>
+
+
+                        <label>
+                            <div class="odp popr">
+                                <input type="radio" name="answer7" value="b">   <strong>b.</strong> Resocjalizację
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer7" value="c">
+                                <strong>c.</strong> Weterynarię
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer7" value="d">
+                                <strong>d.</strong> Filozofię
+                            </div>
+                        </label>
+                    </div>
+                    <div class="quiz_solution">
+                        <p class="quiz_imagea">
+                           <img class="quiz_imagea" src="img/Quiz/quiz_img_7.png">
+                           W odcinku 81 pt."Romeo z Weronek" teściowa rozmawia z Aliną o uczuciu, jakim Kurski darzył starszą panią. Ta wspomina później, że jej mąż, zanim poszedł na historię, studiował resocjalizację, gdzie w ramach praktyk był poznał Kurskiego, którego był opiekunem.
+                        </p>
+                    </div>
+                </section>
+                
+                        <!-- Pytanie 8 -->
+                <section class="quiz_section">
+                    <div class = "question">
+                        8. Co było obiektem sprzeczki pomiędzy Karolem, a Tadziem, która doprowadziła do rozprawy sądowej?
+                    </div>
+            
+            
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp popr">
+                                <input type="radio" name="answer8" value="a">
+                                <strong>a.</strong> Telewizor
+                            </div>
+                        </label>
+
+
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer8" value="b">   <strong>b.</strong> Laptop
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer8" value="c">
+                                <strong>c.</strong> Toster
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer8" value="d">
+                                <strong>d.</strong> Mikrofalówka
+                            </div>
+                        </label>
+                    </div>
+                    <div class="quiz_solution">
+                        <p class="quiz_imagea">
+                           <img class="quiz_image_multi" src="img/Quiz/quiz_img_8a.png">
+                           <img class="quiz_image_multi" src="img/Quiz/quiz_img_8b.png">
+                           Na stole znajduje się przedmiot sporu – kineskop odcinek pt "Krawczyk przeciwko Norkowi".
+                        </p>
+                    </div>
+                    
+                </section>
+                
+                        <!-- Pytanie 9 -->
+                <section class="quiz_section">
+                    <div class = "question">
+                        9. Jak miał na imię właściciel baru "Niedźwiadek", w którym Karol i Tadek postanowili obstawić pieniądze na wyścigu gonitwy konnej?
+                    </div>
+            
+            
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp popr">
+                                <input type="radio" name="answer9" value="a">
+                                <strong>a.</strong> Henio
+                            </div>
+                        </label>
+
+
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer9" value="b">   <strong>b.</strong> Rysio
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer9" value="c">
+                                <strong>c.</strong> Stasio
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer9" value="d">
+                                <strong>d.</strong> Boguś
+                            </div>
+                        </label>
+                    </div>
+                    <div class="quiz_solution">
+                        <p class="quiz_imagea">
+                           <img class="quiz_imagea" src="img/Quiz/quiz_img_9.png">
+                           Gdy Karol i Norek rozmyślają nad tym, w jaki sposób odzyskać utracone pieniądze, do baru dzwoni telefon. Słuchawkę podnosi Norek, który w pewnym momencie krzyczy: ”Henio, ten facet nazywa się Boguś Kopytko, albo wcześniej”. Henio wraca i potajemnie omawia ustawkę gonitwę. Odcinek 33 - "Duży miś".
+                        </p>
+                    </div>
+                </section>
+                
+                        <!-- Pytanie 10 -->
+                <section class="quiz_section">
+                    <div class = "question">
+                        10.Jak nazywał się zespół muzyczny utworzony przez Karola i Tadeusza?
+                    </div>
+            
+            
+                    <div class = "pytanka">
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer10" value="a">
+                                <strong>a.</strong> 
+                            </div>
+                        </label>
+
+
+                        <label>
+                            <div class="odp">
+                                <input type="radio" name="answer10" value="b">   <strong>b.</strong> z Woli
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp">
+                                <input type="radio" name="answer10" value="c">
+                                <strong>c.</strong> Tramwajersi
+                            </div>
+                        </label>
+
+                        <label> 
+                            <div class="odp popr">
+                                <input type="radio" name="answer10" value="d">
+                                <strong>d.</strong> Kanalersi
+                            </div>
+                        </label>
+                    </div>
+                    <div class="quiz_solution">
+                        <p class="quiz_imagea">
+                           <img class="quiz_image_multi" src="img/Quiz/quiz_img_10a.png">
+                           <img class="quiz_image_multi" src="img/Quiz/quiz_img_10b.png">
+                           W scenie z pierwszego obrazka Tadeusz proponuje nazwę – Kanalersi, dla nowo utworzonej kapeli.
+                        </p>
+                    </div>
+                </section>
+<!--                <button type="button" class="dalej"><a href = "#test" class="check">Dalej</a></button><br />-->
+                       <input type="submit" class="dalej" value="Dalej">
+                        
             </form>
         </article>
-
-
-        </div>
-             </main>
-
-
-            <footer>Wszelkie prawa zastrzeżone. &copy 2019.</footer>
-       
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        
+        </main>
+    
+    
+        <footer>Wszelkie prawa zastrzeżone. &copy 2019.</footer>
+    </div>
+    <a href="#"><img class="scroll" src="img/scroll-to-top.png"></a>
+     <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     
     
-     <script src="script.js"></script> 
-    <script>$("input[type='radio']").change(function(){
-            if($(this).is(":checked")){
-                $(this).parent().addClass("redBackground"); 
-              
-            }else{
-                $(this).parent().removeClass("redBackground");  
-            }
-        });
-    </script>   
+	
+	
+	<script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-      
