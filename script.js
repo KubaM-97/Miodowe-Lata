@@ -1,25 +1,44 @@
 $(function(){
     
-    
-     $(window).scroll(function(){
-       if($(this).scrollTop()>700){
-           jQuery(".scroll").fadeIn();
-       } else{$(".scroll").fadeOut();}
+    // ScrollToTop Button
+    $(window).on("scroll",function(){
+         
+       if($(this).scrollTop()>700)
+       {
+           $(".scroll").fadeIn();
+       } 
+         
+       else
+       {
+           $(".scroll").fadeOut();
+       }
+         
     });
     
+//    Zamiast w main.css html{scroll-behavior: smooth;}
+//    $(".scroll").on('click',function() {
+//    $([document.documentElement, document.body]).animate({
+//        scrollTop: $("body").offset().top}, 1100);
+//});
     
-  $(".quiz_solution").hide();
+   
+    // Quiz
+    $(".quiz_solution").hide();
+    
+    //kolorowanie odpowiedzi
     $("input:radio").on("click", function(){
         
         if($(this).prop("checked", true))
-        {
-            $(this).parent().parent().siblings().children().removeClass("redBackground");
+        {                                                                         $(this).parent().parent().siblings().children()
+            .removeClass("redBackground");
+         
             $(this).parent().addClass("redBackground");
         }
            
     });
     
-    $(".dalej").on("submit", function(e){
+    //podsumowanie quizu
+    $(".dalej").on("click", function(e){
         e.preventDefault();
         if($(".redBackground").length<10)
             {
@@ -33,132 +52,93 @@ $(function(){
         $(".odp.redBackground").addClass("wrong");
         
         $("input:radio").prop("disabled", true);
-        $(".quiz_solution").fadeIn();
-        $('window').animate({scrollTop: 0}, 400);
+        $(".quiz_solution").fadeIn(); 
+        
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("body").offset().top}, 1100);
+        
+        $(this).hide();
+        //odpowiedzi
+        $(".quiz_section").each(function(){
+            
+        
+        let $span = $('<span></span>');
+        $span.insertAfter($(this).find(".question"));
+        
+        
+        let value1 = $(this).find(".popr").children().val();
+        let value2 = $(this).find(".redBackground").children().val();
+        
+            
+        if(value2 === value1)
+            {
+                $(this).find($("span")).text("Dobrze! Poprawna odpowiedź to "+ value1);
+                $(this).find($("span")).addClass("dobrze");
+            }
+        else
+            {
+                $(this).find($("span")).text("Źle! Zaznaczyłeś: "+value2+". Poprawna odpowiedź to: "+ value1);
+                $(this).find($("span")).addClass("zle");
+            }
+        });
+        
+        $(".quiz_header p").hide();
     });
     
+    
+    //index.html laughtrack audio
     $("img.red").on("click",function(){
+        
         var audio = document.getElementById("play");
         audio.volume = 0.1;
         $(this).toggleClass("zielen");
-       $('#play').get(0).pause();
+        $('#play').get(0).pause();
+        
         if($(this).hasClass("zielen"))
          {
              $(this).attr("src", "img/Główna/indexgreen.png");
              $("#play").get(0).play();
+             $(this).attr("alt", "Odtwarzanie w trakcie");
          }
-        else{
-                $(this).attr("src", "img/Główna/indexred.png");      
-            }             
+        else
+         {
+             $(this).attr("src", "img/Główna/indexred.png"); 
+             $(this).attr("alt", "Odtwarzanie zatrzymane");
+         }             
     });
+    
+    //index.html pierwszy obraz
     $(window).on("scroll",function(){
        if($(window).scrollTop() > 400 )
            {$("header>img").fadeIn();}
     });
     
-   $("a.episode").hide(); 
+    
+    //subiektywne.html linki do odcinków
+    $("a.episode").hide(); 
     $("button").on("click", function(){
         let aa = $(this).parent().find("a.episode");
         aa.each(function(index){
-            $(this).delay(200*index).fadeIn(1000)
+            $(this).stop().delay(200*index).fadeToggle(1000)
         });
         });
-        });
+    
+    //kontakt.html - placeholder
+    $("input").on("focus", function(){
+        let $place=$(this).attr("placeholder");
+        $(this).attr("placeholder", "");
        
-   
-        
-
+        $(this).on("blur", function(){
+            $(this).attr("placeholder", $place);
+        });
     
-
-
-
-//  $answer.each(function(){})
-//    // POBRANIE WSZYSTKICH INPUTÓW
-//    let kolejne_inputy=document.getElementsByTagName('input');
-//    let len = kolejne_inputy.length;
-//    
-//    
-//    // WYSZUKANIE POLA INPUT ZAZNACZONEGO (WYBRANEJ PRZEZ UŻYTKOWNIKA ODPOWIEDZI) I NADANIE JEGO RODZICOWI KLASY REDBACKGROUND ODPOWIEDZIALNEJ ZA ŻÓŁTE OBRAMOWANIE, A W PRZYPADKU INPUTA NIEZAZNACZONEGO - USUNIĘCIE KLASY REDBACKGROUND RODZICOWI
-//    for(let i=0; i<len; i++)
-//        {
-//            let zazn=kolejne_inputy[i].checked;
-//            // console.log(zazn);
-//            
-//            //RODZIC
-//            let div=kolejne_inputy[i].parentNode;
-//            //console.log(div);
-//            
-//            
-//            if(zazn)
-//            {
-//               //przejście na rodziców inputów(divy)
-//               div.classList.add('redBackground');
-//            }
-//
-//            else
-//            {
-//               div.classList.remove('redBackground');
-//            }
-//
-//        }
-//}
-
-        
-        
+    });
     
+    //kontakt.html - textarea
+    $("textarea").on("keydown", function(){
+        let tekstWprowadzany = $(this).val();
+        let counter = (250 - (tekstWprowadzany.length));    
+    $("#znaki").text("Pozostało: "+counter+" znaków");
 
-//
-//
-//    // WYŚWIETLENIE KOMUNIKATU O ILOŚCI ZDOBYTYCH PUNKTÓW
-//    let zdobyte_punkty = document.getElementsByClassName("odp popr redBackground");
-//    
-//    document.getElementById("test").textContent = "Brawo zdobyłeś " + zdobyte_punkty.length + " pkt!" 
-//  
-//    
-//    
-//  
-//    // USTAWIANIE POPRAWNYCH ODPOWIEDZI NA ZIELONO NA PODSTAWIE SELEKTORA 
-//    let correct=document.querySelectorAll(".odp.popr"); //wybór
-//    let len1 = correct.length;    
-//    
-//    for(let i=0; i<len1; i++)
-//    {
-//       correct[i].className="odp green"; 
-//    }
-//    
-//    
-//    
-//   
-//    // USTAWIANIE ZŁYCH ODPOWIEDZI NA CZERWONO NA PODSTAWIE SELEKTORA
-//    let incorrect = document.querySelectorAll(".odp.redBackground");
-//    let len2 = incorrect.length;
-//    
-//    for (let j=0; j<len2; j++)
-//        {        
-//             
-//            if(incorrect)
-//            {
-//                incorrect[j].classList.add("wrong");  
-//            }
-//            
-//       
-//        }
-//    
-//    
-//    
-//    
-//    // DEAKTYWACJA MOŻLIWOŚCI KLIKNIĘCIA NA INPUTY (WYBORU ODPOWIEDZI) 
-//    let inputy=document.querySelectorAll('input[type=radio]');
-//    let len3 = inputy.length;
-//        
-//    for(let i=0; i<len3; i++)
-//    {
-//        inputy[i].disabled=true;
-//    }
-//
-//}
-//
-//const btn = document.querySelector("button");
-//btn.addEventListener('click', poznaj_odpowiedz, false);
-//
-// 
+    });
+});

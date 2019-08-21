@@ -349,10 +349,12 @@ li.geneza_p
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .lista
 {
-    background-color: firebrick;
+    background-color: #a04200;
     font-size: 23px;
     color: white;
-    margin-bottom: 100px;
+    margin: 60px 0 100px;
+    padding-top: 15px;
+    box-shadow: 0 0 28px black
 }
 .lista li
 {
@@ -367,26 +369,31 @@ li.geneza_p
     margin-left: -40px;
     margin-top: 3px;
     font-size: 21px;
-    background-color: #f44245; 
+    background-color: #c27422; 
+    box-shadow: 0 0 18px black
 }
+
 
 .lista li>ol>li:hover
 {
-    background-color: #f55354;
+    background-color: #b16311;
     cursor: pointer;  
+}
+.lista li>ol>li:active
+{
+  box-shadow: inset 0 0 18px black
 }
 .lista li>a
 {
+    display: block;
     color: whitesmoke;
     text-decoration: none;
 }
-li>a:hover
+.lista li>ol>li:hover a, .lista li>a:hover
 {
     color: black;
-    text-decoration: none;
 }
-
-.content
+section.content
 {
     width: 100%;
     background-color: azure;
@@ -396,7 +403,7 @@ li>a:hover
     border: 2px solid;
     margin-bottom: 20px;
 }
-.content.nowe
+section.content.nowe
 {
     font-size: 50px;
     text-align: center;
@@ -405,7 +412,7 @@ li>a:hover
     padding: 15px;
     margin-top: 30px;
 }
-.content p
+section.content p
 {
     text-align: justify;
     padding: 10px;
@@ -413,23 +420,23 @@ li>a:hover
     float: left;
     color: black;
 }
-.content .powiekszenie_zdjecia
+section.content .powiekszenie_zdjecia
 {overflow: hidden;}
 
-.content .powiekszenie_zdjecia img
+section.content .powiekszenie_zdjecia img
 {
     width: 100%;
     transition: all 1s ease-in-out; 
 }
 
-.content .powiekszenie_zdjecia:hover img
+section.content .powiekszenie_zdjecia:hover img
 {
     transform: scale(1.2); 
 }
 
 article.actors{margin-bottom: 120px;}
 
-.content figcaption
+section.content figcaption
 {
     color:black;
     margin-top: 20px;
@@ -493,16 +500,18 @@ input[type=radio]
 {
     background-color: green;
 }
-p #test
+#test
 {
     text-align: center;
-    background-color: green;
-    color: floralwhite;
+    color: #f9c128;
     font-size: 34px;
     float: none;
-    display: inline;
+    display: block;
     padding: 10px;
     border-radius: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    font-weight: 700;
 }
 input[type=submit]
 {
@@ -544,6 +553,27 @@ figure.quiz_figure
 }
 figure.quiz_figure img
 {width: 100%;}
+
+.dobrze
+{
+    display: block;
+    margin-left: 25px;
+    font-size: 25px;
+    padding: 15px;
+    text-align: left;
+    color: green;
+    font-weight: 800;
+}
+.zle
+{
+    display: block;
+    margin-left: 25px;
+    font-size: 25px;
+    padding: 15px;
+    text-align: left;
+    color: red;
+    font-weight: 800;
+}
 /*quiz - end
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -561,7 +591,8 @@ ul.liin li
 
 a.episode
 {
-    background: blue;
+    box-shadow: 10px 10px 9px black;
+    background: #17729c;
     color: floralwhite;
     font-size: 20px;
     border-radius: 20px;
@@ -569,16 +600,19 @@ a.episode
     text-decoration: none;
 }
 
-a.episode:hover
+
+a.episode:active
 {
-    background-color: green;
+box-shadow: inset 10px 10px 9px black;
+  background-color: #0e0e87;  
 }
 
 div.links
 {text-align: left;}
 button.links
 {
-    background-image: linear-gradient(to left bottom, red, yellow);
+    background-image: linear-gradient(to left bottom, #9e7915, #9e7915);
+    box-shadow: 10px 10px 9px black;    
     border-radius: 15px;
     padding: 10px;
     color: snow;
@@ -588,9 +622,103 @@ button.links
 } 
 button.links:hover
 {
-background-image: linear-gradient(to left bottom, green, purple);
+background-image: linear-gradient(to left bottom, #8d6804, #9f8936);
 transform: skewX(15%)
+   
+}
+button.links:active
+{
+    box-shadow: inset 10px 10px 9px black;
    
 }
 /*subiektywne - end
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+fieldset
+{
+    margin: 100px 0;
+    text-align: left;
+    padding-left: 95px;
+    width: 100%;
+    border: 2px solid white;
+    padding: 30px 20px 30px 95px;
+    font-size: 32px;
+    font-weight: 700;
+}
+legend
+{ 
+    border: 2px solid white;
+    width: 40%;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+i
+{
+    display: inline-block;
+    
+}
+div.pole
+{
+    
+    margin-bottom: 45px;
+    margin-top: 10px;
+}
+fieldset input
+{
+    border-radius: 5px;
+    display: block;
+    outline: none;
+    width: 450px;
+    font-size: 25px;
+}
+fieldset input:focus, textarea:focus
+{
+    box-shadow: 0px 0px 7px 2px blue;
+    border: 2px solid green;
+    background-color: gainsboro;
+    color: blue;
+}
+
+fieldset textarea, select
+{
+    width: 80%;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    resize: none;
+}
+fieldset input[type=submit]
+{
+    letter-spacing: 3px;
+    background-color: aqua;
+    color: aquamarine
+}
+fieldset input[type=submit]:hover;
+{background-color: aquamarine;}
+/*
+fieldset:nth-of-type(2)
+{padding-left: 0px;}
+*/
+div.media
+{
+    margin-left: auto;
+    margin-right: 95px;
+}
+
+div.medium
+{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#kom_podpowiedz
+{
+    display: block;
+    font-size: 24px;
+}
+#znaki
+{yf}
