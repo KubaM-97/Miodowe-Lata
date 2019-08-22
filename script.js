@@ -29,9 +29,7 @@ $(function(){
     $("input:radio").on("click", function(){
         
         if($(this).prop("checked", true))
-        {                                                                         $(this).parent().parent().siblings().children()
-            .removeClass("redBackground");
-         
+        {                                                                                         $(this).parent().parent().siblings().children().removeClass("redBackground");
             $(this).parent().addClass("redBackground");
         }
            
