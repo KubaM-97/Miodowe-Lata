@@ -43,13 +43,15 @@ body::-webkit-scrollbar-button:horizontal:increment
      background: #c06410 url(img/right.png) 3px 2px no-repeat;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8);
 }
+
+
 body
 {
     /* Background pattern from Toptal Subtle Patterns */
 	background-image:url("img/diagonal-squares/diagonal-squares.png");    
     background-attachment: fixed;
 	margin: 0;
-    font-size: 100%;
+    font-size: 30px;
     text-align: center;
     box-sizing: border-box;
     color: #f9c128;
@@ -69,7 +71,6 @@ body
 
 footer
 {
-    text-align: center;
     font-size: 20px;
     background-color: #b05300;
     padding: 15px;
@@ -93,7 +94,6 @@ hr
     background-color: #c06410;
     width: 90vw;
     border: 5px solid #c06410;
-    font-size: 30px;
 }
 
 p
@@ -118,8 +118,7 @@ ul.nawbar>li
     font-size: 25px;
     text-align: justify;
     padding: 20px 8px;
-    border-right: 1px solid black; 
-    text-align: center;
+    border-right: 1px solid black;
     height: 100px;
     line-height: 50px;
     margin-top: 10px
@@ -181,7 +180,6 @@ table
 {
     color: black;
     margin: 60px auto;
-    text-align: center;
     font-size: 30px;
     background: rgb(202, 211, 232);
 }
@@ -261,7 +259,6 @@ img.red
 {
     display: inline-block;
     width: 32%;
-    
     opacity: 0.8;
 }
 
@@ -292,7 +289,6 @@ li.geneza_p
 
 .geneza2
 {
-    
     margin: 30px auto 100px auto;
 }
 
@@ -315,8 +311,6 @@ li.geneza_p
 {border-radius: 50%;}
 .geneza_p
 {
-    font-size: 30px;
-    color: #f9c128;
     background-color: inherit;
 }
 
@@ -335,7 +329,6 @@ li.geneza_p
 .geneza figcaption
 {
     margin-top: 10px;
-    color: #f9c128;
     font-size: 14px;
 }
 /*geneza-end
@@ -406,7 +399,6 @@ section.content
 section.content.nowe
 {
     font-size: 50px;
-    text-align: center;
     text-decoration-color: aqua;
     color: black;
     padding: 15px;
@@ -457,7 +449,6 @@ section.quiz_section
 {
     border: 30px double white;
     background-color: chocolate;
-    color: #f9c128;
     font-family: cursive;
     padding: 20px;
 }
@@ -502,8 +493,6 @@ input[type=radio]
 }
 #test
 {
-    text-align: center;
-    color: #f9c128;
     font-size: 34px;
     float: none;
     display: block;
@@ -531,8 +520,6 @@ input[type=submit]:hover
 }
 .quiz_solution
 {
-      
-    color: #f9c128;
     text-align: justify;
     display:inline-block; 
     border: 1px dashed white; 
@@ -710,7 +697,6 @@ div.medium
 {
     display: inline-block;
     width: 100px;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
