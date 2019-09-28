@@ -31,7 +31,7 @@ $(function () {
     });
 
     //podsumowanie quizu
-    $(".dalej").on("submit click", function (e) {
+    $(".quiz_form").on("submit", function (e) {
         e.preventDefault();
         if ($(".choose").length < 10) {
             alert("Nie zaznaczono wszystkich odpowiedzi!");
