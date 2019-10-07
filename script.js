@@ -10,7 +10,8 @@ $(function () {
 
     });
 
-    //    Zamiast w main.css html{scroll-behavior: smooth;}
+    //    Instead of html{scroll-behavior: smooth;} in main.css
+    //
     //    $(".scroll").on('click',function() {
     //    $([document.documentElement, document.body]).animate({
     //        scrollTop: $("body").offset().top}, 1100);
@@ -20,7 +21,7 @@ $(function () {
     // Quiz
     $(".quiz_solution").hide();
 
-    //kolorowanie odpowiedzi
+    //coloring user's answers
     $("input:radio").on("click", function () {
 
         if ($(this).prop("checked", true)) {
@@ -30,18 +31,19 @@ $(function () {
 
     });
 
-    //podsumowanie quizu
-    $(".quiz_form").on("submit", function (e) {
+    //submitting the quiz
+    // $(".quiz_form").on("submit", function (e) {
+    $(".go").on("click", function (e) {
         e.preventDefault();
         if ($(".choose").length < 10) {
             alert("Nie zaznaczono wszystkich odpowiedzi!");
             return;
         }
-        let $zdobyte_punkty = $(".odp.popr.choose").length;
-        $("#pkt").append(`Brawo! Zdobyłeś ${$zdobyte_punkty} pkt!`);
+        let $points = $(".ans.good.choose").length;
+        $("#pkt").append(`Brawo! Zdobyłeś ${$points} pkt!`);
 
-        $(".odp.popr").addClass("green");
-        $(".odp.choose").addClass("wrong");
+        $(".ans.good").addClass("green");
+        $(".ans.choose").addClass("red");
 
         $("input:radio").prop("disabled", true);
         $(".quiz_solution").fadeIn();
@@ -51,7 +53,7 @@ $(function () {
         }, 1100);
 
         $(this).hide();
-        //odpowiedzi
+        //answers
         $(".quiz_section").each(function () {
 
 
@@ -59,7 +61,7 @@ $(function () {
             $span.insertAfter($(this).find(".question"));
 
 
-            let $value1 = $(this).find(".popr").children().val();
+            let $value1 = $(this).find(".good").children().val();
             let $value2 = $(this).find(".choose").children().val();
 
 
@@ -76,17 +78,17 @@ $(function () {
     });
 
 
-    //index.html laughtrack audio
-    const $imgred = $("img.red");
+    //index.html - laughtrack audio
+    const $imgred = $("img.laugh");
     $($imgred).on("click", function () {
 
         var $audio = $("#play");
         $audio.volume = 0.1;
-        $(this).toggleClass("verde");
+        $(this).toggleClass("sound");
         $audio.get(0).pause();
 
 
-        if ($(this).hasClass("verde")) {
+        if ($(this).hasClass("sound")) {
             $(this).attr("src", "img/Glowna/indexgreen.png");
             $audio.get(0).play();
             $(this).attr("alt", "Odtwarzanie w trakcie");
@@ -95,14 +97,14 @@ $(function () {
             $(this).attr("alt", "Odtwarzanie zatrzymane");
         }
         $audio.on('ended', function () {
-            $($imgred).removeClass("verde");
+            $($imgred).removeClass("sound");
             $($imgred).attr("src", "img/Glowna/indexred.png");
             $($imgred).attr("alt", "Odtwarzanie zatrzymane");
 
         });
     });
 
-    //index.html pierwszy obraz
+    //index.html - first image
     const $headerimg = $("header>img");
     $(window).on("scroll", function () {
 
@@ -118,7 +120,7 @@ $(function () {
     });
 
 
-    //subiektywne.html linki do odcinków
+    //subiektywne.html - links
     $("a.episode").hide();
     $("button").on("click", function () {
         let aa = $(this).parent().find("a.episode");
@@ -139,10 +141,10 @@ $(function () {
     });
 
     //kontakt.html - textarea
-    $("textarea").on("keydown keyup click", function () {
-        let $tekstWprowadzany = $(this).val();
-        let $counter = (250 - ($tekstWprowadzany.length));
-        $("#znaki").text(`Pozostało: ${$counter} znaków`);
+    $("textarea").on("keypress keyup", function () {
+        let $textInserted = $(this).val();
+        let $counter = (250 - ($textInserted.length));
+        $("#chars").text(`Pozostało: ${$counter} znaków`);
 
     });
 });

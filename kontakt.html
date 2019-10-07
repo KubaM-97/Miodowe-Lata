@@ -93,11 +93,11 @@
                 
                 <address>
                    
-                    <div class="dane"><strong><i class="icon-adult"></i><span class="dane">Imię i nazwisko:</span></strong> Janusz Kowal</div>
+                    <div class="data"><strong><i class="icon-adult"></i><span class="data">Imię i nazwisko:</span></strong> Janusz Kowal</div>
 
-                    <div class="dane"><strong><i class="icon-mobile"></i><span class="dane">Telefon:</span></strong> 123456789</div>
+                    <div class="data"><strong><i class="icon-mobile"></i><span class="data">Telefon:</span></strong> 123456789</div>
 
-                    <div class="dane"><strong><i class="icon-at-1"></i><span class="dane">Email:</span></strong> adres@gmail.com</div>
+                    <div class="data"><strong><i class="icon-at-1"></i><span class="data">Email:</span></strong> adres@gmail.com</div>
                     
                 </address>
                 
@@ -154,19 +154,19 @@
 
                     <legend>Formularz zgłoszeniowy</legend>
 
-                    <div class="pole">
-                        <label>Twoje imię: <input type="text" placeholder="Wpisz imię" name="imie"></label>
+                    <div class="field">
+                        <label>Twoje imię: <input type="text" placeholder="Wpisz imię" name="firstName"></label>
                     </div>
 
-                    <div class="pole">
-                        <label>Twój numer telefonu: <input type="tel" placeholder="Wpisz 9 cyfrowy numer telefonu" name="nr_tel"></label>
+                    <div class="field">
+                        <label>Twój numer telefonu: <input type="tel" placeholder="Wpisz 9 cyfrowy numer telefonu" name="telNumber"></label>
                     </div>
 
-                    <div class="pole">
-                        <label>Twój adres email: <input type="email" placeholder="Wpisz adres z @" name="adres_email"></label>
+                    <div class="field">
+                        <label>Twój adres email: <input type="email" placeholder="Wpisz adres z @" name="emialAddress"></label>
                     </div>
 
-                    <div class="pole">
+                    <div class="field">
                         <label>W czym pomóc?
                             <select name="problem">
                                 <optgroup label="Najpopularniejsze">
@@ -182,12 +182,12 @@
                         </label>
                     </div>
 
-                    <div class="pole">
+                    <div class="field">
                         <label>Dodaj coś od siebie (opcjonalnie):
-                            <span id="kom_podpowiedz">Maks: 250 znaków</span>
+                            <span id="comment_tip">Maks: 250 znaków</span>
                             <textarea rows="4" maxlength="250" name="komentarz"></textarea>
                         </label>
-                        <span id="znaki">Pozostało: 250 znaków</span>
+                        <span id="chars">Pozostało: 250 znaków</span>
                     </div>
 
                     <input type="submit" value="Wyślij">
