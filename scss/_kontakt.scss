@@ -16,26 +16,7 @@ fieldset {
     }
 
 
-    label {
-        width: 100%;
-    }
 
-    input {
-        border-radius: 5px;
-        display: block;
-        outline: none;
-        width: 55% !important;
-        font-size: 1.5rem;
-        padding-left: 5px;
-
-        &:focus {
-            -webkit-box-shadow: 0px 0px 7px 2px blue;
-            -moz-box-shadow: 0px 0px 7px 2px blue;
-            box-shadow: 0px 0px 7px 2px blue;
-            background-color: gainsboro;
-            color: #1036cc;
-        }
-    }
 
     div.media {
         margin-right: auto;
@@ -56,34 +37,58 @@ fieldset {
         margin-bottom: 40px;
         margin-top: 15px;
 
-        textarea,
-        select {
-            width: 80%;
-            display: block;
-            resize: none;
-            padding-left: 9px;
-        }
-
-        textarea:focus,
-        select:focus {
-            -webkit-box-shadow: 0px 0px 7px 2px blue;
-            -moz-box-shadow: 0px 0px 7px 2px blue;
-            box-shadow: 0px 0px 7px 2px blue;
-            background-color: gainsboro;
-            color: #1036cc;
-        }
+        label {
+            width: 100%;
 
 
-        #comment_tip {
-            display: block;
-            font-size: 1.5rem;
+            input {
+                border-radius: 5px;
+                display: block;
+                outline: none;
+                width: 55%;
+                font-size: 1.5rem;
+                padding-left: 5px;
+
+                &:focus {
+                    -webkit-box-shadow: 0px 0px 7px 2px blue;
+                    -moz-box-shadow: 0px 0px 7px 2px blue;
+                    box-shadow: 0px 0px 7px 2px blue;
+                    background-color: gainsboro;
+                    color: #1036cc;
+                }
+            }
+
+            textarea,
+            select {
+                width: 80%;
+                display: block;
+                resize: none;
+                padding-left: 9px;
+            }
+
+            textarea:focus,
+            select:focus {
+                -webkit-box-shadow: 0px 0px 7px 2px blue;
+                -moz-box-shadow: 0px 0px 7px 2px blue;
+                box-shadow: 0px 0px 7px 2px blue;
+                background-color: gainsboro;
+                color: #1036cc;
+            }
+
+            .feedback {
+                font-size: 1rem;
+            }
+
+            #comment_tip {
+                display: block;
+                font-size: 1.5rem;
+            }
         }
     }
 
 
 
     input[type=submit] {
-        width: 350px;
         padding: 15px;
         letter-spacing: 3px;
         background-color: #f8d238;
@@ -112,13 +117,19 @@ fieldset {
             font-size: 1.8rem;
         }
 
-        input,
-        select,
-        textarea {
-            width: 100%;
-            font-size: 1rem;
-            margin-top: 10px;
+        div.field {
+            label {
+
+                input,
+                select,
+                textarea {
+                    width: 100%;
+                    font-size: 1rem;
+                    margin-top: 10px;
+                }
+            }
         }
+
     }
 }
 
@@ -135,14 +146,17 @@ fieldset {
                 white-space: pre;
             }
         }
-        
-        input{
-            width: 100% !important;
+
+        div.field {
+
+            input,
+            select,
+            textarea {
+                width: 100%;
+            }
         }
-        
-        input[type=submit]{
-            width: 90% !important;
-        }
+
+
     }
 }
 
@@ -153,14 +167,13 @@ fieldset {
         input,
         select,
         textarea {
-            width: 100% !important;
+            width: 100%;
             font-size: 1.5rem;
             margin-top: 10px;
         }
 
         input[type=submit] {
             margin: 70px auto 10px;
-            width: 100%;
         }
 
         div.medium i {

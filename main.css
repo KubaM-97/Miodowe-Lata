@@ -315,16 +315,22 @@ li.geneza_p {
   margin: 20px auto 50px;
 }
 
-@media (orientation: portrait) {
+@media (max-width: 1100px) and (orientation: portrait) {
   .geneza2 img {
+    width: 100%;
+  }
+  .geneza_iframe {
     width: 100%;
   }
 }
 
-@media (orientation: landscape) {
+@media (max-width: 1100px) and (orientation: landscape) {
   .gallery {
     margin-top: 0px;
     margin-bottom: 20px;
+  }
+  .geneza_iframe {
+    width: 100%;
   }
 }
 
@@ -407,7 +413,7 @@ section.content.new {
 }
 
 section.content p {
-  padding: 10px;
+  padding-top: 35px;
   font-size: 1.25rem;
   float: left;
   color: black;
@@ -415,6 +421,7 @@ section.content p {
 
 section.content .photo_enlargement {
   overflow: hidden;
+  margin: 15px;
 }
 
 section.content .photo_enlargement img {
@@ -767,26 +774,6 @@ fieldset legend {
   padding: 10px;
 }
 
-fieldset label {
-  width: 100%;
-}
-
-fieldset input {
-  border-radius: 5px;
-  display: block;
-  outline: none;
-  width: 55% !important;
-  font-size: 1.5rem;
-  padding-left: 5px;
-}
-
-fieldset input:focus {
-  -webkit-box-shadow: 0px 0px 7px 2px blue;
-  box-shadow: 0px 0px 7px 2px blue;
-  background-color: gainsboro;
-  color: #1036cc;
-}
-
 fieldset div.media {
   margin-right: auto;
   margin-left: auto;
@@ -806,29 +793,52 @@ fieldset div.field {
   margin-top: 15px;
 }
 
-fieldset div.field textarea,
-fieldset div.field select {
-  width: 80%;
-  display: block;
-  resize: none;
-  padding-left: 9px;
+fieldset div.field label {
+  width: 100%;
 }
 
-fieldset div.field textarea:focus,
-fieldset div.field select:focus {
+fieldset div.field label input {
+  border-radius: 5px;
+  display: block;
+  outline: none;
+  width: 55%;
+  font-size: 1.5rem;
+  padding-left: 5px;
+}
+
+fieldset div.field label input:focus {
   -webkit-box-shadow: 0px 0px 7px 2px blue;
   box-shadow: 0px 0px 7px 2px blue;
   background-color: gainsboro;
   color: #1036cc;
 }
 
-fieldset div.field #comment_tip {
+fieldset div.field label textarea,
+fieldset div.field label select {
+  width: 80%;
+  display: block;
+  resize: none;
+  padding-left: 9px;
+}
+
+fieldset div.field label textarea:focus,
+fieldset div.field label select:focus {
+  -webkit-box-shadow: 0px 0px 7px 2px blue;
+  box-shadow: 0px 0px 7px 2px blue;
+  background-color: gainsboro;
+  color: #1036cc;
+}
+
+fieldset div.field label .feedback {
+  font-size: 1rem;
+}
+
+fieldset div.field label #comment_tip {
   display: block;
   font-size: 1.5rem;
 }
 
 fieldset input[type=submit] {
-  width: 350px;
   padding: 15px;
   letter-spacing: 3px;
   background-color: #f8d238;
@@ -852,9 +862,9 @@ fieldset input[type=submit]:hover {
     text-align: center;
     font-size: 1.8rem;
   }
-  fieldset input,
-  fieldset select,
-  fieldset textarea {
+  fieldset div.field label input,
+  fieldset div.field label select,
+  fieldset div.field label textarea {
     width: 100%;
     font-size: 1rem;
     margin-top: 10px;
@@ -872,11 +882,10 @@ fieldset input[type=submit]:hover {
     content: '\A';
     white-space: pre;
   }
-  fieldset input {
-    width: 100% !important;
-  }
-  fieldset input[type=submit] {
-    width: 90% !important;
+  fieldset div.field input,
+  fieldset div.field select,
+  fieldset div.field textarea {
+    width: 100%;
   }
 }
 
@@ -884,7 +893,7 @@ fieldset input[type=submit]:hover {
   fieldset input,
   fieldset select,
   fieldset textarea {
-    width: 100% !important;
+    width: 100%;
     font-size: 1.5rem;
     margin-top: 10px;
   }
@@ -898,12 +907,6 @@ fieldset input[type=submit]:hover {
   }
   fieldset > div {
     margin-bottom: 30px;
-  }
-  fieldset div.media {
-    margin-right: 0;
-  }
-  fieldset div.media .medium a {
-    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

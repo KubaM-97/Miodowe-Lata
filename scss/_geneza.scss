@@ -70,11 +70,16 @@ li.geneza_p {
     margin: 20px auto 50px;
 }
 
+@media (max-width: 1100px){
 @media (orientation:portrait) {
 
 
     .geneza2 img {
         width: 100%
+    }
+
+    .geneza_iframe {
+        width: 100%;
     }
 }
 
@@ -84,4 +89,9 @@ li.geneza_p {
         margin-top: 0px;
         margin-bottom: 20px;
     }
+
+    .geneza_iframe {
+        width: 100%;
+    }
+}
 }

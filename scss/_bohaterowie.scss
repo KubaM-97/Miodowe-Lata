@@ -78,7 +78,7 @@ section.content {
     }
 
     p {
-        padding: 10px;
+        padding-top: 35px;
         font-size: 1.25rem;
         float: left;
         color: black;
@@ -86,6 +86,7 @@ section.content {
 
     .photo_enlargement {
         overflow: hidden;
+        margin: 15px;
 
         img {
             transition: all 1s ease-in-out;
@@ -138,3 +139,5 @@ section.content {
         }
     }
 }
+
+

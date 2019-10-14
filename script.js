@@ -139,9 +139,43 @@ $(function () {
         });
 
     });
+    
+    //kontakt.html - tel
+    $("input[type=tel]").on("blur", function () {
+        let $text = $(this).val();
+        let $re = /^(\d{7}|\d{9})$/;
+        if (!($re.exec($text))) {
+            const $div = $('<div class="feedback"></div>');
+            $div.text("Proszę wprowadzić poprawny numer telefonu.")
+                     .addClass("feedback")
+                     .insertAfter($("input[type=tel]"));
+            $(this).on("focus", function () {
+        $(".feedback").hide();
+    });
+        }
+    });
+
+    //kontakt.html - email
+    $("input[type=email]").on("blur", function () {
+        let $text = $(this).val();
+        let $re = /^[\w-\.]+@[\w-+]+\.([a-z\.]+)$/i;
+        if (!($re.exec($text))) {
+            const $div = $('<div class="feedback"></div>');
+            $div.text("Proszę wprowadzić poprawny adres e-mail.")
+                     .addClass("feedback")
+                     .insertAfter($("input[type=email]"));
+            $(this).on("focus", function () {
+        $(".feedback").hide();
+    });
+        }
+    
+
+
+
+    });
 
     //kontakt.html - textarea
-    $("textarea").on("keypress keyup", function () {
+    $("textarea").on("input", function () {
         let $textInserted = $(this).val();
         let $counter = (250 - ($textInserted.length));
         $("#chars").text(`Pozostało: ${$counter} znaków`);
