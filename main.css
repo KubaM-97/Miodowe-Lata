@@ -79,7 +79,7 @@ footer {
 
 h1 {
   padding: 70px 0;
-  font-size: 3.75rem;
+  font-size: 3rem;
 }
 
 /*navbar*/
@@ -127,9 +127,6 @@ ul.nawbar > li:last-child {
 @media (orientation: portrait) {
   .container {
     padding: 5px;
-  }
-  h1 {
-    font-size: 1.5rem;
   }
 }
 
@@ -594,7 +591,6 @@ section.subT5 h2 {
 .quiz_section {
   border: 30px double white;
   background-color: chocolate;
-  font-family: cursive;
   padding: 20px;
   margin-bottom: 50px;
 }
@@ -869,6 +865,20 @@ fieldset input[type=submit]:hover {
     font-size: 1rem;
     margin-top: 10px;
   }
+  fieldset ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  fieldset :-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+  }
+  fieldset ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+  }
+  fieldset :-ms-input-placeholder {
+    text-align: center;
+  }
 }
 
 @media (orientation: portrait) {
@@ -899,7 +909,7 @@ fieldset input[type=submit]:hover {
   }
   fieldset input[type=submit] {
     margin: 70px auto 10px;
-    width: 100%;
+    display: block;
   }
   fieldset div.medium i {
     margin: 0;
@@ -907,6 +917,12 @@ fieldset input[type=submit]:hover {
   }
   fieldset > div {
     margin-bottom: 30px;
+  }
+  fieldset div.media {
+    margin-right: 0;
+  }
+  fieldset div.media .medium a {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

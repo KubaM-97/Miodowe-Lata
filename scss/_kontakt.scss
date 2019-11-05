@@ -130,6 +130,25 @@ fieldset {
             }
         }
 
+
+
+        ::-webkit-input-placeholder {
+            text-align: center;
+        }
+
+        :-moz-placeholder {
+            /* Firefox 18- */
+            text-align: center;
+        }
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            text-align: center;
+        }
+
+        :-ms-input-placeholder {
+            text-align: center;
+        }
     }
 }
 
@@ -174,6 +193,7 @@ fieldset {
 
         input[type=submit] {
             margin: 70px auto 10px;
+            display: block;
         }
 
         div.medium i {
