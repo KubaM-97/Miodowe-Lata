@@ -727,6 +727,10 @@ figure.quiz_figure img {
   .quiz_solution p iframe {
     width: 100%;
   }
+  .quiz_solution iframe {
+    width: 250px;
+    height: 350px;
+  }
   input[type=submit] {
     padding: 20px;
   }

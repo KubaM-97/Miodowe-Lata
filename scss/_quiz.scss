@@ -114,6 +114,7 @@ input[type=submit] {
         padding: 5px;
         width: 100%;
     }
+    
 
 }
 
@@ -171,6 +172,11 @@ figure.quiz_figure {
                 width: 100%;
             }
         }
+        
+    iframe {
+        width: 250px;
+        height: 350px;
+    }
     }
 
 

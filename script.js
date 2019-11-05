@@ -69,7 +69,7 @@ $(function () {
                 $(this).find($("span")).text(`Dobrze! Poprawna odpowiedź to ${$value1}.`);
                 $(this).find($("span")).addClass("correct");
             } else {
-                $(this).find($("span")).text(`Źle! Zaznaczyłeś:  ${$value2}. Poprawna odpowiedź to: ${$value1}.`);
+                $(this).find($("span")).text(`Źle! Zaznaczono:  ${$value2}. Poprawna odpowiedź to: ${$value1}.`);
                 $(this).find($("span")).addClass("incorrect");
             }
         });
