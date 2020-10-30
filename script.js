@@ -40,7 +40,7 @@ $(function () {
             return;
         }
         let $points = $(".ans.good.choose").length;
-        $("#pkt").append(`Brawo! Zdobyłeś ${$points} pkt!`);
+        $("#pkt").append(`Brawo! Twój wynik to: ${$points} pkt!`);
 
         $(".ans.good").addClass("green");
         $(".ans.choose").addClass("red");
